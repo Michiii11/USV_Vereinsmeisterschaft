@@ -14,6 +14,9 @@ function getDraw(type, elem) {
 
     document.querySelector("main").style.height = "100%"
     document.querySelector("main").style.width = "max(100%, 1000px)"
+    if(document.querySelector("span")){
+        document.querySelectorAll("span").forEach(elem=>{elem.style.left = "80%"})
+    }
 
     switch (type) {
         case 'menSingle': draw =
@@ -22,6 +25,9 @@ function getDraw(type, elem) {
             break;
         case 'menDouble': draw = menDoubleDraw; printDraw(16);
             document.querySelector("main").style.width = "max(100%, 1750px)"
+            if(document.querySelector("span")){
+                document.querySelectorAll("span").forEach(elem=>{elem.style.left = "88%"})
+            }
             break;
         case 'womenSingle': draw = womenSingleDraw; printDraw(8); break;
         case 'womenDouble': printDraw(4); womenDoubleDraw(); return;
@@ -168,18 +174,22 @@ function printDraw(type){
                 <div class="bracket qA1">
                     <div class="person"><p></p><p></p></div>
                     <div class="person"><p></p><p></p></div>
+                    <span>(1)</span>
                 </div>
                 <div class="bracket qA2">
                     <div class="person"><p></p><p></p></div>
                     <div class="person"><p></p><p></p></div>
+                    <span>(2)</span>
                 </div>
                 <div class="bracket qA3">
                     <div class="person"><p></p><p></p></div>
                     <div class="person"><p></p><p></p></div>
+                    <span>(3)</span>
                 </div>
                 <div class="bracket qA4">
                     <div class="person"><p></p><p></p></div>
                     <div class="person"><p></p><p></p></div>
+                    <span>(4)</span>
                 </div>
             </div>
 
@@ -274,10 +284,12 @@ function printDraw(type){
                 <div class="bracket sA1">
                     <div class="person"><p></p><p></p></div>
                     <div class="person"><p></p><p></p></div>
+                    <span>(1)</span>
                 </div>
                 <div class="bracket sA2">
                     <div class="person"><p></p><p></p></div>
                     <div class="person"><p></p><p></p></div>
+                    <span>(2)</span>
                 </div>
             </div>
 
