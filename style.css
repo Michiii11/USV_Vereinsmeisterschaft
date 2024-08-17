@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+div.toggle {
+  display: flex;
+  justify-content: center;
+}
+div.toggle p {
+  padding-inline: 2rem;
+  padding-block: 0.5rem;
+  cursor: pointer;
+  border-bottom: 2px solid cadetblue;
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+div.toggle p:hover {
+  background-color: hsl(182, 25%, 75%);
+}
+div.toggle p.active {
+  background-color: hsl(182, 25%, 50%);
+}
+
+main {
+  display: flex;
+  height: 85vh;
+  width: 100%;
+}
+main > div {
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+main > div.center {
+  grid-template-rows: repeat(8, 1fr);
+  width: 20%;
+}
+
+.column {
+  display: grid;
+  grid-template-columns: auto;
+  width: 100%;
+  align-content: space-evenly;
+  align-items: center;
+}
+
+.bracket {
+  height: 50%;
+  width: 100%;
+  border: 1px solid black;
+  position: relative;
+}
+.bracket div.person {
+  position: absolute;
+  margin: 0;
+  left: 50%;
+  transform: translatex(-50%);
+  width: max-content;
+}
+.bracket div.person:first-of-type {
+  bottom: calc(100% - 2.65rem);
+}
+.bracket div.person:first-of-type p:first-child {
+  font-weight: 500;
+}
+.bracket div.person:first-of-type p:last-child:not(:first-child) {
+  color: hsl(0, 0%, 25%);
+}
+.bracket div.person:last-of-type {
+  top: calc(100% - 2.65rem);
+}
+.bracket div.person p:first-child {
+  font-weight: 500;
+}
+.bracket div.person p:last-child:not(:first-child) {
+  color: hsl(0, 0%, 25%);
+}
+
+.bracket.wA, .bracket.wB {
+  border-bottom: 0px;
+}
+
+main .center div.person:first-of-type {
+  bottom: calc(100% - 0.85rem);
+}
+main .center div.person:last-of-type {
+  top: calc(100% - 2.35rem);
+}
+
+main .left .bracket {
+  border-right: none;
+}
+main .left .column {
+  translate: 0 var(--top);
+}
+main .right .bracket {
+  border-left: none;
+}
+main table {
+  margin-inline: auto;
+  width: 70%;
+  height: 35%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin-top: 1rem;
+}
+main table th, main table td {
+  border: 1px solid black;
+  padding: 0.2rem;
+  text-align: center;
+  font-weight: 500;
+}
+main table th.black {
+  background-color: lightgrey;
+}
+main table td {
+  background-color: white;
+}
+
+/*# sourceMappingURL=style.css.map */

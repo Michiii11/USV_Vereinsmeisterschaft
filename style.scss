@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+div.toggle{
+    display: flex;
+    justify-content: center;
+
+    p{
+        padding-inline: 2rem;
+        padding-block: .5rem;
+        cursor: pointer;
+        border-bottom: 2px solid cadetblue;
+        transition: all .2s ease;
+        font-weight: 500;
+
+        &:hover{
+            background-color: hsl(182, 25%, 75%);
+        }
+
+        &.active{
+            background-color: hsl(182, 25%, 50%);
+        }
+    }
+}
+
+main{
+    display: flex;
+    height: 85vh;
+    width: 100%;
+
+    > div{
+        height: 100%;
+        width: 100%;
+        display: flex;
+
+        &.center{
+            grid-template-rows: repeat(8, 1fr);
+            width: 20%;
+        }
+    }
+}
+
+.column{
+    display: grid;
+    grid-template-columns: auto;
+    width: 100%;
+    align-content: space-evenly;
+    align-items: center;
+}
+
+.bracket{
+    height: 50%;
+    width: 100%;
+    border: 1px solid black;
+    position: relative;
+
+
+    div.person{
+        position: absolute;
+        margin: 0;
+        left: 50%;
+        transform: translatex(-50%);
+        width: max-content;
+
+
+        &:first-of-type{
+            bottom: calc(100% - 2.65rem);
+
+            p:first-child{
+                font-weight: 500;
+            }
+
+            p:last-child:not(:first-child){
+                color: hsl(0, 0, 25%);
+            }
+        }
+
+        &:last-of-type {
+            top: calc(100% - 2.65rem);
+        }
+
+        p:first-child {
+            font-weight: 500;
+        }
+
+        p:last-child:not(:first-child) {
+            color: hsl(0, 0, 25%);
+        }
+    }
+}
+
+.bracket.wA, .bracket.wB{
+    border-bottom: 0px;
+}
+
+main .center{
+    div.person:first-of-type{
+        bottom: calc(100% - .85rem);
+    }
+    div.person:last-of-type{
+        top: calc(100% - 2.35rem);
+    }
+}
+
+main{
+    .left {
+        .bracket{
+            border-right: none;
+        }
+
+        .column{
+            translate: 0 var(--top)
+        }
+    }
+    .right .bracket{
+        border-left: none;
+    }
+
+    table{
+        margin-inline: auto;
+        width: 70%;
+        height: 35%;
+        border-collapse: collapse;
+        border-spacing: 0;
+        margin-top: 1rem;
+
+        th, td{
+            border: 1px solid black;
+            padding: .2rem;
+            text-align: center;
+            font-weight: 500;
+        }
+
+        th.black{
+            background-color: lightgrey;
+        }
+
+        td{
+            background-color: white;
+        }
+    }
+}
