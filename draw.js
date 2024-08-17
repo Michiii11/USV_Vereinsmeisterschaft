@@ -10,42 +10,42 @@ let menSingleDraw = [
         {player1: "Peter S.", player2: "Patrick", className: "r8"},
     ],
     [ // Quarterfinal A
-        {player1: "Mich", result1: "6:4 6:4", player2: "Yanik", result2: "6:4 6:4", className: "qA1"},
-        {player1: "Mich", result1: "6:4 6:4", player2: "Yanik", result2: "6:4 6:4", className: "qA2"},
-        {player1: "Mich", result1: "6:4 6:4", player2: "Yanik", result2: "6:4 6:4", className: "qA3"},
-        {player1: "Mich", result1: "6:4 6:4", player2: "Yanik", result2: "6:4 6:4", className: "qA4"},
+        {player1: "", result1: "", player2: "", result2: "", className: "qA1"},
+        {player1: "", result1: "", player2: "", result2: "", className: "qA2"},
+        {player1: "", result1: "", player2: "", result2: "", className: "qA3"},
+        {player1: "", result1: "", player2: "", result2: "", className: "qA4"},
     ],
     [ // Semifinal A
-        {player1: "Mich", result1: "6:4 6:4", player2: "Yanik", result2: "6:4 6:4", className: "sA1"},
-        {player1: "Mich", result1: "6:4 6:4", player2: "Yanik", result2: "6:4 6:4", className: "sA2"},
+        {player1: "", result1: "", player2: "", result2: "", className: "sA1"},
+        {player1: "", result1: "", player2: "", result2: "", className: "sA2"},
     ],
     [ // Final A
-        {player1: "Mich", result1: "6:4 6:4", player2: "Yanik", result2: "6:4 6:4", className: "fA"},
+        {player1: "", result1: "", player2: "", result2: "", className: "fA"},
     ],
     [ // Winner A
-        {player1: "winnerA", result1: "6:4 6:4", className: "wA"},
+        {player1: "", result1: "", className: "wA"},
     ],
     [ // Round 2 B
-        {player1: "Mich", result1: "6:4 6:4", player2: "Yanik", result2: "6:4 6:4", className: "r2B1"},
-        {player1: "Mich", result1: "6:4 6:4", player2: "Yanik", result2: "6:4 6:4", className: "r2B2"},
-        {player1: "Mich", result1: "6:4 6:4", player2: "Yanik", result2: "6:4 6:4", className: "r2B3"},
-        {player1: "Mich", result1: "6:4 6:4", player2: "Yanik", result2: "6:4 6:4", className: "r2B4"},
+        {player1: "", result1: "", player2: "", result2: "", className: "r2B1"},
+        {player1: "", result1: "", player2: "", result2: "", className: "r2B2"},
+        {player1: "", result1: "", player2: "", result2: "", className: "r2B3"},
+        {player1: "", result1: "", player2: "", result2: "", className: "r2B4"},
     ],
     [ // Round 3 B
-        {player1: "Mich", result1: "6:4 6:4", player2: "Yanik", result2: "6:4 6:4", className: "qB1"},
-        {player1: "Mich", result1: "6:4 6:4", player2: "Yanik", result2: "6:4 6:4", className: "qB2"},
-        {player1: "Mich", result1: "6:4 6:4", player2: "Yanik", result2: "6:4 6:4", className: "qB3"},
-        {player1: "Mich", result1: "6:4 6:4", player2: "Yanik", result2: "6:4 6:4", className: "qB4"},
+        {player1: "", result1: "", player2: "", result2: "", className: "qB1"},
+        {player1: "", result1: "", player2: "", result2: "", className: "qB2"},
+        {player1: "", result1: "", player2: "", result2: "", className: "qB3"},
+        {player1: "", result1: "", player2: "", result2: "", className: "qB4"},
     ],
     [ // Round 4 B
-        {player1: "Mich", result1: "6:4 6:4", player2: "Yanik", result2: "6:4 6:4", className: "sB1"},
-        {player1: "Mich", result1: "6:4 6:4", player2: "Yanik", result2: "6:4 6:4", className: "sB2"},
+        {player1: "", result1: "", player2: "", result2: "", className: "sB1"},
+        {player1: "", result1: "", player2: "", result2: "", className: "sB2"},
     ],
     [ // Round 5 B
-        {player1: "Mich", result1: "6:4 6:4", player2: "Yanik", result2: "6:4 6:4", className: "fB"},
+        {player1: "", result1: "", player2: "", result2: "", className: "fB"},
     ],
     [ // Winner B
-        {player1: "Mich", result1: "6:4 6:4", className: "wB"},
+        {player1: "", result1: "", className: "wB"},
     ],
 ];
 
@@ -56,47 +56,47 @@ let menDoubleDraw = [
         {player1: "Patrick Ö / Mario H", player2: "Patrick P / Mario V", className: "r3"},
         {player1: "Bye", player2: "Herbert / Gerhard", className: "r4"},
         {player1: "Peter / Andi", player2: "Bye", className: "r5"},
-        {player1: "Bye", player2: "David / Philipp", className: "r6"},
+        {player1: "Bye", player2: "Daniel / Philipp", className: "r6"},
         {player1: "Lukas / Jakob", player2: "Bye", className: "r7"},
-        {player1: "Bye", player2: "Michi / Luki", className: "r8"},
+        {player1: "Bye", player2: "Michi / Lukas", className: "r8"},
     ],
     [ // Quarterfinal A
-        {player1: "Mich", result1: "6:4 6:4", player2: "Yanik", result2: "6:4 6:4", className: "qA1"},
-        {player1: "Mich", result1: "6:4 6:4", player2: "Yanik", result2: "6:4 6:4", className: "qA2"},
-        {player1: "Mich", result1: "6:4 6:4", player2: "Yanik", result2: "6:4 6:4", className: "qA3"},
-        {player1: "Mich", result1: "6:4 6:4", player2: "Yanik", result2: "6:4 6:4", className: "qA4"},
+        {player1: "Lea / Elias", result1: "ㅤ", player2: "", result2: "", className: "qA1"},
+        {player1: "", result1: "", player2: "Herbert / Gerhard", result2: "ㅤ", className: "qA2"},
+        {player1: "Peter / Andi", result1: "ㅤ", player2: "Daniel / Philipp", result2: "ㅤ", className: "qA3"},
+        {player1: "Lukas P. / Jakob", result1: "ㅤ", player2: "Michi / Lukas L.", result2: "ㅤ", className: "qA4"},
     ],
     [ // Semifinal A
-        {player1: "Mich", result1: "6:4 6:4", player2: "Yanik", result2: "6:4 6:4", className: "sA1"},
-        {player1: "Mich", result1: "6:4 6:4", player2: "Yanik", result2: "6:4 6:4", className: "sA2"},
+        {player1: "", result1: "", player2: "", result2: "", className: "sA1"},
+        {player1: "", result1: "", player2: "", result2: "", className: "sA2"},
     ],
     [ // Final A
-        {player1: "Mich", result1: "6:4 6:4", player2: "Yanik", result2: "6:4 6:4", className: "fA"},
+        {player1: "", result1: "", player2: "", result2: "", className: "fA"},
     ],
     [ // Winner A
-        {player1: "Mich", result1: "6:4 6:4", className: "wA"},
+        {player1: "", result1: "", className: "wA"},
     ],
     [ // Round 2 B
-        {player1: "Mich", result1: "6:4 6:4", player2: "Yanik", result2: "6:4 6:4", className: "r2B1"},
-        {player1: "Mich", result1: "6:4 6:4", player2: "Yanik", result2: "6:4 6:4", className: "r2B2"},
-        {player1: "Mich", result1: "6:4 6:4", player2: "Yanik", result2: "6:4 6:4", className: "r2B3"},
-        {player1: "Mich", result1: "6:4 6:4", player2: "Yanik", result2: "6:4 6:4", className: "r2B4"},
+        {player1: "Bye", result1: "ㅤ", player2: "", result2: "", className: "r2B1"},
+        {player1: "", result1: "", player2: "Bye", result2: "ㅤ", className: "r2B2"},
+        {player1: "Bye", result1: "ㅤ", player2: "Bye", result2: "ㅤ", className: "r2B3"},
+        {player1: "Bye", result1: "ㅤ", player2: "Bye", result2: "ㅤ", className: "r2B4"},
     ],
     [ // Round 3 B
-        {player1: "Mich", result1: "6:4 6:4", player2: "Yanik", result2: "6:4 6:4", className: "qB1"},
-        {player1: "Mich", result1: "6:4 6:4", player2: "Yanik", result2: "6:4 6:4", className: "qB2"},
-        {player1: "Mich", result1: "6:4 6:4", player2: "Yanik", result2: "6:4 6:4", className: "qB3"},
-        {player1: "Mich", result1: "6:4 6:4", player2: "Yanik", result2: "6:4 6:4", className: "qB4"},
+        {player1: "", result1: "", player2: "", result2: "", className: "qB1"},
+        {player1: "", result1: "", player2: "", result2: "", className: "qB2"},
+        {player1: "Bye", result1: "ㅤ", player2: "", result2: "", className: "qB3"},
+        {player1: "Bye", result1: "ㅤ", player2: "", result2: "", className: "qB4"},
     ],
     [ // Round 4 B
-        {player1: "Mich", result1: "6:4 6:4", player2: "Yanik", result2: "6:4 6:4", className: "sB1"},
-        {player1: "Mich", result1: "6:4 6:4", player2: "Yanik", result2: "6:4 6:4", className: "sB2"},
+        {player1: "", result1: "", player2: "", result2: "", className: "sB1"},
+        {player1: "", result1: "", player2: "", result2: "", className: "sB2"},
     ],
     [ // Round 5 B
-        {player1: "Mich", result1: "6:4 6:4", player2: "Yanik", result2: "6:4 6:4", className: "fB"},
+        {player1: "", result1: "", player2: "", result2: "", className: "fB"},
     ],
     [ // Winner B
-        {player1: "Mich", result1: "6:4 6:4", className: "wB"},
+        {player1: "", result1: "", className: "wB"},
     ],
 ];
 
@@ -108,28 +108,28 @@ let womenSingleDraw = [
         {player1: "Rosa", player2: "Lea", className: "r4"}
     ],
     [ // Semifinal A
-        {player1: "Mich", result1: "6:4 6:4", player2: "Yanik", result2: "6:4 6:4", className: "sA1"},
-        {player1: "Mich", result1: "6:4 6:4", player2: "Yanik", result2: "6:4 6:4", className: "sA2"},
+        {player1: "", result1: "", player2: "", result2: "", className: "sA1"},
+        {player1: "", result1: "", player2: "", result2: "", className: "sA2"},
     ],
     [ // Final A
-        {player1: "Mich", result1: "6:4 6:4", player2: "Yanik", result2: "6:4 6:4", className: "fA"},
+        {player1: "", result1: "", player2: "", result2: "", className: "fA"},
     ],
     [ // Winner A
-        {player1: "Mich", result1: "6:4 6:4", className: "wA"},
+        {player1: "", result1: "", className: "wA"},
     ],
     [ // Round 2 B
-        {player1: "Mich", result1: "6:4 6:4", player2: "Yanik", result2: "6:4 6:4", className: "r2B1"},
-        {player1: "Mich", result1: "6:4 6:4", player2: "Yanik", result2: "6:4 6:4", className: "r2B2"},
+        {player1: "", result1: "", player2: "", result2: "", className: "r2B1"},
+        {player1: "", result1: "", player2: "", result2: "", className: "r2B2"},
     ],
     [ // Semifinal B
-        {player1: "Mich", result1: "6:4 6:4", player2: "Yanik", result2: "6:4 6:4", className: "sB1"},
-        {player1: "Mich", result1: "6:4 6:4", player2: "Yanik", result2: "6:4 6:4", className: "sB2"},
+        {player1: "", result1: "", player2: "", result2: "", className: "sB1"},
+        {player1: "", result1: "", player2: "", result2: "", className: "sB2"},
     ],
     [ // Final B
-        {player1: "Mich", result1: "6:4 6:4", player2: "Yanik", result2: "6:4 6:4", className: "fB"},
+        {player1: "", result1: "", player2: "", result2: "", className: "fB"},
     ],
     [ // Winner B
-        {player1: "Mich", result1: "6:4 6:4", className: "wB"},
+        {player1: "", result1: "", className: "wB"},
     ],
 ];
 
