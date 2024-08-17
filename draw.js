@@ -16,8 +16,8 @@ let menSingleDraw = [
         {player1: "", result1: "", player2: "", result2: "", className: "qA4"},
     ],
     [ // Semifinal A
-        {player1: "", result1: "", player2: "", result2: "", className: "sA1"},
-        {player1: "", result1: "", player2: "", result2: "", className: "sA2"},
+        {player1: "VF 1", result1: "", player2: "VF 2", result2: "", className: "sA1"},
+        {player1: "VF 3", result1: "", player2: "VF 4", result2: "", className: "sA2"},
     ],
     [ // Final A
         {player1: "", result1: "", player2: "", result2: "", className: "fA"},
@@ -31,21 +31,31 @@ let menSingleDraw = [
         {player1: "", result1: "", player2: "", result2: "", className: "r2B3"},
         {player1: "", result1: "", player2: "", result2: "", className: "r2B4"},
     ],
-    [ // Round 3 B
-        {player1: "", result1: "", player2: "", result2: "", className: "qB1"},
-        {player1: "", result1: "", player2: "", result2: "", className: "qB2"},
-        {player1: "", result1: "", player2: "", result2: "", className: "qB3"},
-        {player1: "", result1: "", player2: "", result2: "", className: "qB4"},
+    [ // Quarterfinal B
+        {player1: "VF 5", result1: "", player2: "Loser VF 2", result2: "", className: "qB1"},
+        {player1: "VF 6", result1: "", player2: "Loser VF 1", result2: "", className: "qB2"},
+        {player1: "VF 7", result1: "", player2: "Loser VF 4", result2: "", className: "qB3"},
+        {player1: "VF 8", result1: "", player2: "Loser VF 3", result2: "", className: "qB4"},
     ],
-    [ // Round 4 B
+    [ // Semifinal B
         {player1: "", result1: "", player2: "", result2: "", className: "sB1"},
         {player1: "", result1: "", player2: "", result2: "", className: "sB2"},
     ],
-    [ // Round 5 B
+    [ // Final B
         {player1: "", result1: "", player2: "", result2: "", className: "fB"},
     ],
     [ // Winner B
         {player1: "", result1: "", className: "wB"},
+    ],
+    [ // Semifinal C
+        {player1: "Loser VF 5", result1: "", player2: "Loser VF 6", result2: "", className: "rC1"},
+        {player1: "Loser VF 7", result1: "", player2: "Loser VF 8", result2: "", className: "rC2"},
+    ],
+    [ // Final C
+        {player1: "", result1: "", player2: "", result2: "", className: "fC"},
+    ],
+    [ // Winner B
+        {player1: "", result1: "", className: "wC"},
     ],
 ];
 
@@ -61,14 +71,14 @@ let menDoubleDraw = [
         {player1: "Bye", player2: "Michi / Lukas", className: "r8"},
     ],
     [ // Quarterfinal A
-        {player1: "Lea / Elias", result1: "ㅤ", player2: "", result2: "", className: "qA1"},
-        {player1: "", result1: "", player2: "Herbert / Gerhard", result2: "ㅤ", className: "qA2"},
-        {player1: "Peter / Andi", result1: "ㅤ", player2: "Daniel / Philipp", result2: "ㅤ", className: "qA3"},
-        {player1: "Lukas P. / Jakob", result1: "ㅤ", player2: "Michi / Lukas L.", result2: "ㅤ", className: "qA4"},
+        {player1: "Lea / Elias", result1: "", player2: "", result2: "", className: "qA1"},
+        {player1: "", result1: "", player2: "Herbert / Gerhard", result2: "", className: "qA2"},
+        {player1: "Peter / Andi", result1: "", player2: "Daniel / Philipp", result2: "", className: "qA3"},
+        {player1: "Lukas P. / Jakob", result1: "", player2: "Michi / Lukas L.", result2: "", className: "qA4"},
     ],
     [ // Semifinal A
-        {player1: "", result1: "", player2: "", result2: "", className: "sA1"},
-        {player1: "", result1: "", player2: "", result2: "", className: "sA2"},
+        {player1: "VF 1", result1: "", player2: "VF 2", result2: "", className: "sA1"},
+        {player1: "VF 3", result1: "", player2: "VF 4", result2: "", className: "sA2"},
     ],
     [ // Final A
         {player1: "", result1: "", player2: "", result2: "", className: "fA"},
@@ -77,20 +87,20 @@ let menDoubleDraw = [
         {player1: "", result1: "", className: "wA"},
     ],
     [ // Round 2 B
-        {player1: "Bye", result1: "ㅤ", player2: "", result2: "", className: "r2B1"},
-        {player1: "", result1: "", player2: "Bye", result2: "ㅤ", className: "r2B2"},
-        {player1: "Bye", result1: "ㅤ", player2: "Bye", result2: "ㅤ", className: "r2B3"},
-        {player1: "Bye", result1: "ㅤ", player2: "Bye", result2: "ㅤ", className: "r2B4"},
+        {player1: "Bye", result1: "", player2: "", result2: "", className: "r2B1"},
+        {player1: "", result1: "", player2: "Bye", result2: "", className: "r2B2"},
+        {player1: "Bye", result1: "", player2: "Bye", result2: "", className: "r2B3"},
+        {player1: "Bye", result1: "", player2: "Bye", result2: "", className: "r2B4"},
     ],
     [ // Round 3 B
-        {player1: "", result1: "", player2: "", result2: "", className: "qB1"},
-        {player1: "", result1: "", player2: "", result2: "", className: "qB2"},
-        {player1: "Bye", result1: "ㅤ", player2: "", result2: "", className: "qB3"},
-        {player1: "Bye", result1: "ㅤ", player2: "", result2: "", className: "qB4"},
+        {player1: "", result1: "", player2: "Loser VF 2", result2: "", className: "qB1"},
+        {player1: "", result1: "", player2: "Loser VF 1", result2: "", className: "qB2"},
+        {player1: "Bye", result1: "", player2: "Loser VF 4", result2: "", className: "qB3"},
+        {player1: "Bye", result1: "", player2: "Loser VF 3", result2: "", className: "qB4"},
     ],
     [ // Round 4 B
         {player1: "", result1: "", player2: "", result2: "", className: "sB1"},
-        {player1: "", result1: "", player2: "", result2: "", className: "sB2"},
+        {player1: "Loser VF 4", result1: "", player2: "Loser VF 3", result2: "", className: "sB2"},
     ],
     [ // Round 5 B
         {player1: "", result1: "", player2: "", result2: "", className: "fB"},
@@ -112,7 +122,7 @@ let womenSingleDraw = [
         {player1: "", result1: "", player2: "", result2: "", className: "sA2"},
     ],
     [ // Final A
-        {player1: "", result1: "", player2: "", result2: "", className: "fA"},
+        {player1: "SF 1", result1: "", player2: "SF 2", result2: "", className: "fA"},
     ],
     [ // Winner A
         {player1: "", result1: "", className: "wA"},
@@ -122,8 +132,8 @@ let womenSingleDraw = [
         {player1: "", result1: "", player2: "", result2: "", className: "r2B2"},
     ],
     [ // Semifinal B
-        {player1: "", result1: "", player2: "", result2: "", className: "sB1"},
-        {player1: "", result1: "", player2: "", result2: "", className: "sB2"},
+        {player1: "", result1: "", player2: "Loser SF 2", result2: "", className: "sB1"},
+        {player1: "", result1: "", player2: "Loser SF 1", result2: "", className: "sB2"},
     ],
     [ // Final B
         {player1: "", result1: "", player2: "", result2: "", className: "fB"},

@@ -70,6 +70,23 @@ main{
     }
 }
 
+main.cEvent{
+    .center{
+        width: 40%;
+    }
+    .bracket div.person{
+        &:first-of-type{
+            bottom: calc(100%);
+            translate: 0 50%;
+        }
+
+        &:last-of-type{
+            top: calc(100%);
+            translate: 0 -50%;
+        }
+    }
+}
+
 .column{
     display: grid;
     grid-template-columns: auto;
@@ -117,8 +134,8 @@ main{
     }
 }
 
-.bracket.wA, .bracket.wB{
-    border-bottom: 0px;
+.bracket.wA, .bracket.wB, .bracket.wC{
+    border-bottom: 0;
 
     div.person{
         height: fit-content;

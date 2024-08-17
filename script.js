@@ -6,6 +6,8 @@ function getDraw(type, elem) {
 
     let draw
 
+    document.querySelector("main.cEvent").style.display = "none"
+
     if(document.querySelector("main").classList.contains("big")){
         document.querySelector("main").classList.remove("big")
     }
@@ -14,7 +16,10 @@ function getDraw(type, elem) {
     document.querySelector("main").style.width = "max(100%, 1000px)"
 
     switch (type) {
-        case 'menSingle': draw = menSingleDraw; printDraw(16); break;
+        case 'menSingle': draw =
+            menSingleDraw; printDraw(16); addCEvent();
+            document.querySelector("main.cEvent").style.display = "flex"
+            break;
         case 'menDouble': draw = menDoubleDraw; printDraw(16);
             document.querySelector("main").style.width = "max(100%, 1750px)"
             break;
@@ -31,15 +36,16 @@ function getDraw(type, elem) {
                 if(bracket.querySelectorAll("div.person")[1]) {
                     let player2 = bracket.querySelectorAll("div.person")[1].querySelectorAll("p");
                     player2[0].innerHTML = match.player2
-                    if(match.result2){
-                        player2[1].innerHTML = match.result2
+
+                    if(match.result2 !== undefined){
+                        player2[1].innerHTML = match.result2 !== "" ? match.result2 : "ㅤ"
                     }
                 }
 
                 player1[0].innerHTML = match.player1
-
-                if(match.result1){
-                    player1[1].innerHTML = match.result1
+                if(match.result1 !== undefined) {
+                    console.log(match.result1)
+                    player1[1].innerHTML = match.result1 !== "" ? match.result1 : "ㅤ"
                 }
             }
         });
@@ -338,5 +344,37 @@ function printDraw(type){
     }
 }
 
+function addCEvent(){
+    document.querySelector("main.cEvent").style.height = "50%"
+    document.querySelector("main.cEvent").style.width = "max(75%, 800px)"
+
+    document.querySelector("main.cEvent").innerHTML = `
+        <div class="left"></div>
+        <div class="center column" style="grid-template-rows: repeat(2, 1fr);">
+            <div class="bracket rC1">
+                <div class="person"><p></p><p></p></div>
+                <div class="person"><p></p><p></p></div>
+            </div>
+            <div class="bracket rC2">
+                <div class="person"><p></p><p></p></div>
+                <div class="person"><p></p><p></p></div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="column" style="grid-template-rows: 1fr;">
+                <div class="bracket fC">
+                    <div class="person"><p></p><p></p></div>
+                    <div class="person"><p></p><p></p></div>
+                </div>
+            </div>
+
+            <div class="column" style="--top: 6.25%;">
+                <div class="bracket wC">
+                    <div class="person"><p></p><p></p></div>
+                </div>
+            </div>
+        </div>
+        `
+}
 
 getDraw("menSingle")
