@@ -32,10 +32,10 @@ let menSingleDraw = [
         {player1: "", result1: "", player2: "", result2: "", className: "r2B4"},
     ],
     [ // Quarterfinal B
-        {player1: "", result1: "", player2: "ㅤ", result2: "(2)", className: "qB1"},
+        {player1: "", result1: "", player2: "ㅤ", result2: "(3)", className: "qB1"},
         {player1: "", result1: "", player2: "ㅤ", result2: "(4)", className: "qB2"},
         {player1: "", result1: "", player2: "ㅤ", result2: "(1)", className: "qB3"},
-        {player1: "", result1: "", player2: "ㅤ", result2: "(3)", className: "qB4"},
+        {player1: "", result1: "", player2: "ㅤ", result2: "(2)", className: "qB4"},
     ],
     [ // Semifinal B
         {player1: "", result1: "", player2: "", result2: "", className: "sB1"},
@@ -93,10 +93,10 @@ let menDoubleDraw = [
         {player1: "Bye", result1: "", player2: "Bye", result2: "", className: "r2B4"},
     ],
     [ // Round 3 B
-        {player1: "", result1: "", player2: "ㅤ", result2: "(2)", className: "qB1"},
+        {player1: "", result1: "", player2: "ㅤ", result2: "(3)", className: "qB1"},
         {player1: "", result1: "", player2: "ㅤ", result2: "(4)", className: "qB2"},
         {player1: "Bye", result1: "", player2: "ㅤ", result2: "(1)", className: "qB3"},
-        {player1: "Bye", result1: "", player2: "ㅤ", result2: "(3)", className: "qB4"},
+        {player1: "Bye", result1: "", player2: "ㅤ", result2: "(2)", className: "qB4"},
     ],
     [ // Round 4 B
         {player1: "", result1: "", player2: "", result2: "", className: "sB1"},
@@ -132,8 +132,8 @@ let womenSingleDraw = [
         {player1: "", result1: "", player2: "", result2: "", className: "r2B2"},
     ],
     [ // Semifinal B
-        {player1: "", result1: "", player2: "ㅤ", result2: "(1)", className: "sB1"},
-        {player1: "", result1: "", player2: "ㅤ", result2: "(2)", className: "sB2"},
+        {player1: "", result1: "", player2: "ㅤ", result2: "(2)", className: "sB1"},
+        {player1: "", result1: "", player2: "ㅤ", result2: "(1)", className: "sB2"},
     ],
     [ // Final B
         {player1: "", result1: "", player2: "", result2: "", className: "fB"},
