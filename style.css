@@ -162,13 +162,24 @@ main table td {
 
 span {
   position: relative;
-  left: 80%;
+  left: 88%;
   top: 40%;
+}
+span.right {
+  left: 2%;
 }
 
 @media (max-width: 750px) {
   main table {
     margin-inline: 1rem;
+  }
+  span {
+    position: relative;
+    left: 80%;
+    top: 40%;
+  }
+  span.right {
+    left: 5%;
   }
 }
 
