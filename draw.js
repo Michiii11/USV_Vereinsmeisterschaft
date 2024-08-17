@@ -53,7 +53,7 @@ let menDoubleDraw = [
     [ // Round 1
         {player1: "Lea / Elias", player2: "Bye", className: "r1"},
         {player1: "Thomas / David", player2: "Peter / Paul", className: "r2"},
-        {player1: "Patrick Ö / Mario H", player2: "Patrick P / Mario V", className: "r3"},
+        {player1: "Patrick Ö / Mario O", player2: "Patrick P / Mario V", className: "r3"},
         {player1: "Bye", player2: "Herbert / Gerhard", className: "r4"},
         {player1: "Peter / Andi", player2: "Bye", className: "r5"},
         {player1: "Bye", player2: "Daniel / Philipp", className: "r6"},

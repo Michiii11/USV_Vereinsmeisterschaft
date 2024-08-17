@@ -10,12 +10,14 @@ function getDraw(type, elem) {
         document.querySelector("main").classList.remove("big")
     }
 
+    document.querySelector("main").style.height = "100%"
+    document.querySelector("main").style.width = "max(100%, 1000px)"
+
     switch (type) {
         case 'menSingle': draw = menSingleDraw; printDraw(16); break;
         case 'menDouble': draw = menDoubleDraw; printDraw(16);
-            if(!document.querySelector("main").classList.contains("big")){
-                document.querySelector("main").classList.add("big")
-            }            break;
+            document.querySelector("main").style.width = "max(100%, 1750px)"
+            break;
         case 'womenSingle': draw = womenSingleDraw; printDraw(8); break;
         case 'womenDouble': printDraw(4); womenDoubleDraw(); return;
     }
@@ -56,8 +58,6 @@ function womenDoubleDraw(){
     }
 }
 function printDraw(type){
-
-
     if(type === 16){
         document.querySelector("main").innerHTML = `
         <div class="left">
@@ -205,6 +205,9 @@ function printDraw(type){
     }
 
     if(type === 8){
+        document.querySelector("main").style.height = "50%"
+        document.querySelector("main").style.width = "max(75%, 800px)"
+
         document.querySelector("main").innerHTML = `
         <div class="left">
             <div class="column" style="--top: 12.5%;">
