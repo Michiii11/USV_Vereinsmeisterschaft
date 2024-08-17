@@ -92,7 +92,7 @@ main{
         width: max-content;
         display: flex;
         flex-direction: column;
-        gap: .25rem;
+        gap: .2rem;
 
         &:first-of-type{
             bottom: calc(100%);
@@ -154,7 +154,7 @@ main{
         height: 35%;
         border-collapse: collapse;
         border-spacing: 0;
-        margin-top: 1rem;
+        padding-top: 2rem;
 
         th, td{
             border: 1px solid black;

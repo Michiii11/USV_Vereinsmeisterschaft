@@ -84,7 +84,7 @@ main > div.center {
   width: max-content;
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;
+  gap: 0.2rem;
 }
 .bracket div.person:first-of-type {
   bottom: 100%;
@@ -133,7 +133,7 @@ main table {
   height: 35%;
   border-collapse: collapse;
   border-spacing: 0;
-  margin-top: 1rem;
+  padding-top: 2rem;
 }
 main table th, main table td {
   border: 1px solid black;
