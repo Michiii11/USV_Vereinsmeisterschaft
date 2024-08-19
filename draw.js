@@ -11,7 +11,7 @@ let menSingleDraw = [
     ],
     [ // Quarterfinal A
         {player1: "ㅤ", result1: "22.08. 17:30", player2: "", result2: "", className: "qA1"},
-        {player1: "", result1: "", player2: "", result2: "", className: "qA2"},
+        {player1: "ㅤ", result1: "21.08. 15:00", player2: "", result2: "", className: "qA2"},
         {player1: "", result1: "", player2: "", result2: "", className: "qA3"},
         {player1: "ㅤ", result1: "21.08. 18:00", player2: "ㅤ", result2: "22.08. 18:30", className: "qA4"},
     ],
