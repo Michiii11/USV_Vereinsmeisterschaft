@@ -148,8 +148,8 @@ let womenDoublePlayer = [
     "Karin / Rosa", "Amelie / Edith", "Marlene / Andrea", "Helga / Sabine",
 ]
 let womenDoubleResults = [
+    "", "6:7 3:6", "",
     "", "", "",
-    "", "", "",
-    "", "", "",
+    "7:6 6:3", "", "",
     "", "", ""
 ]

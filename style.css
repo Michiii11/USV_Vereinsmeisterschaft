@@ -169,8 +169,37 @@ span.right {
   left: 2%;
 }
 
+div.roundRobin {
+  display: flex;
+  flex-direction: column;
+}
+div.roundRobin table.erg {
+  margin-top: 5rem;
+  margin-inline: auto;
+  width: 40%;
+  height: 35%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  padding-top: 2rem;
+}
+div.roundRobin table.erg th, div.roundRobin table.erg td {
+  border: 1px solid black;
+  padding: 0.2rem;
+  text-align: center;
+  font-weight: 500;
+}
+div.roundRobin table.erg th {
+  background-color: lightgrey;
+}
+div.roundRobin table.erg td {
+  background-color: white;
+}
+
 @media (max-width: 750px) {
   main table {
+    margin-inline: 1rem;
+  }
+  div.roundRobin table.erg {
     margin-inline: 1rem;
   }
   span {

@@ -64,12 +64,12 @@ function getDraw(type, elem) {
 }
 
 function womenDoubleDraw(){
-    let nameFields =  document.querySelectorAll("table th:not(.black)")
+    let nameFields =  document.querySelectorAll("table:not(.erg) th:not(.black)")
     for (let i = 0; i < nameFields.length; i++) {
         nameFields[i].innerHTML = womenDoublePlayer[i]
     }
 
-    let resultFields =  document.querySelectorAll("table td")
+    let resultFields =  document.querySelectorAll("table:not(.erg) td")
     for (let i = 0; i < resultFields.length; i++) {
         resultFields[i].innerHTML = womenDoubleResults[i]
     }
@@ -320,6 +320,7 @@ function printDraw(type){
 
     if(type === 4){
         document.querySelector("main").innerHTML = `
+        <div class="roundRobin">
         <table>
             <tr>
                 <th class="black"></th>
@@ -361,6 +362,45 @@ function printDraw(type){
                 <th class="black"></th>
             </tr>
         </table>
+        
+        <table class="erg">
+            <tr>
+                <th>Spieler</th>
+                <th>Spiele</th>
+                <th>Siege</th>
+                <th>Sätze</th>
+                <th>Games</th>
+            </tr>
+            <tr>
+                <td>Marlene / Andrea</td>
+                <td>1</td>
+                <td>1</td>
+                <td>2:0</td>
+                <td>13:9</td>
+            </tr>
+            <tr>
+                <td>Amelie / Edith</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0:0</td>
+                <td>0:0</td>
+            </tr>
+            <tr>
+                <td>Helga / Sabine</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0:0</td>
+                <td>0:0</td>
+            </tr>
+            <tr>
+                <td>Karin / Rosa</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0:2</td>
+                <td>9:13</td>
+            </tr>
+        </table>
+        </div>
         `
     }
 }
