@@ -10,7 +10,7 @@ let menSingleDraw = [
         {player1: "Peter S.", player2: "Patrick", className: "r8"},
     ],
     [ // Quarterfinal A
-        {player1: "ㅤ", result1: "22.08. 17:30", player2: "", result2: "", className: "qA1"},
+        {player1: "ㅤ", result1: "26.08. 18:00", player2: "", result2: "", className: "qA1"},
         {player1: "ㅤ", result1: "21.08. 15:00", player2: "", result2: "", className: "qA2"},
         {player1: "", result1: "", player2: "", result2: "", className: "qA3"},
         {player1: "ㅤ", result1: "21.08. 18:00", player2: "ㅤ", result2: "22.08. 18:30", className: "qA4"},
@@ -78,7 +78,7 @@ let menDoubleDraw = [
     ],
     [ // Semifinal A
         {player1: "", result1: "", player2: "", result2: "", className: "sA1"},
-        {player1: "", result1: "", player2: "", result2: "", className: "sA2"},
+        {player1: "ㅤ", result1: "26.08. 20:00", player2: "", result2: "", className: "sA2"},
     ],
     [ // Final A
         {player1: "", result1: "", player2: "", result2: "", className: "fA"},
@@ -119,7 +119,7 @@ let womenSingleDraw = [
     ],
     [ // Semifinal A
         {player1: "Helga", result1: "6:0 6:0", player2: "", result2: "", className: "sA1"},
-        {player1: "", result1: "", player2: "ㅤ", result2: "22.08. 19:00", className: "sA2"},
+        {player1: "ㅤ", result1: "29.08. 17:00", player2: "ㅤ", result2: "22.08. 19:00", className: "sA2"},
     ],
     [ // Final A
         {player1: "", result1: "", player2: "", result2: "", className: "fA"},
