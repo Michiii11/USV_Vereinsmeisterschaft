@@ -67,8 +67,8 @@ let menDoubleDraw = [
         {player1: "Bye", player2: "Herbert / Gerhard", className: "r4"},
         {player1: "Peter S. / Andi", player2: "Bye", className: "r5"},
         {player1: "Bye", player2: "Daniel / Philipp", className: "r6"},
-        {player1: "Lukas / Jakob", player2: "Bye", className: "r7"},
-        {player1: "Bye", player2: "Michi / Lukas", className: "r8"},
+        {player1: "Lukas P. / Jakob", player2: "Bye", className: "r7"},
+        {player1: "Bye", player2: "Michi / Lukas L.", className: "r8"},
     ],
     [ // Quarterfinal A
         {player1: "Lea / Elias", result1: "", player2: "", result2: "", className: "qA1"},
