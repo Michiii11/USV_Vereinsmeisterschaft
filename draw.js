@@ -10,10 +10,10 @@ let menSingleDraw = [
         {player1: "Peter S.", player2: "Patrick", className: "r8"},
     ],
     [ // Quarterfinal A
-        {player1: "ㅤ", result1: "26.08. 18:00", player2: "", result2: "", className: "qA1"},
+        {player1: "ㅤ", result1: "26.08. 18:00", player2: "ㅤ", result2: "24.08. 18:00", className: "qA1"},
         {player1: "ㅤ", result1: "21.08. 15:00", player2: "", result2: "", className: "qA2"},
         {player1: "ㅤ", result1: "28.08. 17:00", player2: "", result2: "", className: "qA3"},
-        {player1: "Peter P.", result1: "6:2 6:2", player2: "ㅤ", result2: "22.08. 18:30", className: "qA4"},
+        {player1: "Peter P.", result1: "6:2 6:2", player2: "Patrick", result2: "6:2 6:0", className: "qA4"},
     ],
     [ // Semifinal A
         {player1: "", result1: "", player2: "", result2: "", className: "sA1"},
@@ -29,7 +29,7 @@ let menSingleDraw = [
         {player1: "", result1: "", player2: "", result2: "", className: "r2B1"},
         {player1: "", result1: "", player2: "", result2: "", className: "r2B2"},
         {player1: "", result1: "", player2: "", result2: "", className: "r2B3"},
-        {player1: "Gerhard", result1: "", player2: "", result2: "", className: "r2B4"},
+        {player1: "Gerhard", result1: "", player2: "Peter S.", result2: "", className: "r2B4"},
     ],
     [ // Quarterfinal B
         {player1: "", result1: "", player2: "ㅤ", result2: "(3)", className: "qB1"},
@@ -118,8 +118,8 @@ let womenSingleDraw = [
         {player1: "Rosa", player2: "Lea", className: "r4"}
     ],
     [ // Semifinal A
-        {player1: "Helga", result1: "6:0 6:0", player2: "", result2: "", className: "sA1"},
-        {player1: "ㅤ", result1: "29.08. 17:00", player2: "ㅤ", result2: "22.08. 19:00", className: "sA2"},
+        {player1: "Helga", result1: "6:0 6:0", player2: "ㅤ", result2: "25.08. 18:00", className: "sA1"},
+        {player1: "ㅤ", result1: "29.08. 17:00", player2: "Lea", result2: "6:0 6:0", className: "sA2"},
     ],
     [ // Final A
         {player1: "", result1: "", player2: "", result2: "", className: "fA"},
@@ -129,7 +129,7 @@ let womenSingleDraw = [
     ],
     [ // Round 2 B
         {player1: "Andrea", result1: "", player2: "", result2: "", className: "r2B1"},
-        {player1: "", result1: "", player2: "", result2: "", className: "r2B2"},
+        {player1: "", result1: "", player2: "Rosa", result2: "", className: "r2B2"},
     ],
     [ // Semifinal B
         {player1: "", result1: "", player2: "ㅤ", result2: "(2)", className: "sB1"},
