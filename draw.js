@@ -17,7 +17,7 @@ let menSingleDraw = [
     ],
     [ // Semifinal A
         {player1: "", result1: "", player2: "", result2: "", className: "sA1"},
-        {player1: "", result1: "", player2: "", result2: "", className: "sA2"},
+        {player1: "", result1: "", player2: "ㅤ", result2: "29.08. 08:30", className: "sA2"},
     ],
     [ // Final A
         {player1: "", result1: "", player2: "", result2: "", className: "fA"},
