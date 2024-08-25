@@ -78,7 +78,7 @@ let menDoubleDraw = [
     ],
     [ // Semifinal A
         {player1: "", result1: "", player2: "", result2: "", className: "sA1"},
-        {player1: "ㅤ", result1: "26.08. 20:00", player2: "", result2: "", className: "sA2"},
+        {player1: "ㅤ", result1: "26.08. 20:00", player2: "ㅤ", result2: "28.08. 16:00", className: "sA2"},
     ],
     [ // Final A
         {player1: "", result1: "", player2: "", result2: "", className: "fA"},
