@@ -97,6 +97,7 @@ main.cEvent .bracket div.person:last-of-type {
   display: flex;
   flex-direction: column;
   gap: 0.2rem;
+  text-align: center;
 }
 .bracket div.person:first-of-type {
   bottom: 100%;
@@ -158,6 +159,10 @@ main table th.black {
 }
 main table td {
   background-color: white;
+}
+main table td.grey {
+  font-weight: 400;
+  color: hsl(0, 0%, 25%);
 }
 
 span {

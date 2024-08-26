@@ -110,6 +110,7 @@ main.cEvent{
         display: flex;
         flex-direction: column;
         gap: .2rem;
+        text-align: center;
 
         &:first-of-type{
             bottom: calc(100%);
@@ -186,6 +187,11 @@ main{
 
         td{
             background-color: white;
+        }
+
+        td.grey{
+            font-weight: 400;
+            color: hsl(0, 0, 25%);
         }
     }
 }

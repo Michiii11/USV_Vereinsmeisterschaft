@@ -335,7 +335,7 @@ function printDraw(type){
                 <th class="black"></th>
                 <td></td>
                 <td></td>
-                <td></td>
+                <td class="grey"></td>
             </tr>
 
             <tr>
@@ -351,14 +351,14 @@ function printDraw(type){
                 <td></td>
                 <td></td>
                 <th class="black"></th>
-                <td></td>
+                <td class="grey"></td>
             </tr>
             
             <tr>
                 <th></th>
+                <td class="grey"></td>
                 <td></td>
-                <td></td>
-                <td></td>
+                <td class="grey"></td>
                 <th class="black"></th>
             </tr>
         </table>

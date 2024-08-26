@@ -78,7 +78,7 @@ let menDoubleDraw = [
     ],
     [ // Semifinal A
         {player1: "", result1: "", player2: "", result2: "", className: "sA1"},
-        {player1: "ㅤ", result1: "26.08. 20:00", player2: "ㅤ", result2: "28.08. 16:00", className: "sA2"},
+        {player1: "Peter S. / Andi", result1: "6:0 6:0", player2: "ㅤ", result2: "28.08. 16:00", className: "sA2"},
     ],
     [ // Final A
         {player1: "", result1: "", player2: "", result2: "", className: "fA"},
@@ -93,7 +93,7 @@ let menDoubleDraw = [
         {player1: "Bye", result1: "", player2: "Bye", result2: "", className: "r2B4"},
     ],
     [ // Round 3 B
-        {player1: "", result1: "", player2: "ㅤ", result2: "(3)", className: "qB1"},
+        {player1: "", result1: "", player2: "Daniel / Philipp", result2: "(3)", className: "qB1"},
         {player1: "", result1: "", player2: "ㅤ", result2: "(4)", className: "qB2"},
         {player1: "Bye", result1: "", player2: "ㅤ", result2: "(1)", className: "qB3"},
         {player1: "Bye", result1: "", player2: "ㅤ", result2: "(2)", className: "qB4"},
