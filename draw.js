@@ -10,9 +10,9 @@ let menSingleDraw = [
         {player1: "Peter S.", player2: "Patrick", className: "r8"},
     ],
     [ // Quarterfinal A
-        {player1: "ㅤ", result1: "26.08. 18:00", player2: "Severin", result2: "6:1 6:2", className: "qA1"},
-        {player1: "Jakob", result1: "6:0 7:6", player2: "ㅤ", result2: "29.08. 14:00", className: "qA2"},
-        {player1: "ㅤ", result1: "28.08. 17:00", player2: "", result2: "", className: "qA3"},
+        {player1: "Michi", result1: "6:0 6:0", player2: "Severin", result2: "6:1 6:2", className: "qA1"},
+        {player1: "Jakob", result1: "6:0 7:6", player2: "ㅤ", result2: "29.08. 16:30", className: "qA2"},
+        {player1: "ㅤ", result1: "28.08. 16:00", player2: "", result2: "", className: "qA3"},
         {player1: "Peter P.", result1: "6:2 6:2", player2: "Patrick", result2: "6:2 6:0", className: "qA4"},
     ],
     [ // Semifinal A
@@ -26,7 +26,7 @@ let menSingleDraw = [
         {player1: "", result1: "", className: "wA"},
     ],
     [ // Round 2 B
-        {player1: "", result1: "", player2: "Andi", result2: "", className: "r2B1"},
+        {player1: "David L.", result1: "", player2: "Andi", result2: "", className: "r2B1"},
         {player1: "David K.", result1: "", player2: "", result2: "", className: "r2B2"},
         {player1: "", result1: "", player2: "", result2: "", className: "r2B3"},
         {player1: "Gerhard", result1: "", player2: "Peter S.", result2: "", className: "r2B4"},
@@ -71,7 +71,7 @@ let menDoubleDraw = [
         {player1: "Bye", player2: "Michi / Lukas L.", className: "r8"},
     ],
     [ // Quarterfinal A
-        {player1: "Lea / Elias", result1: "", player2: "", result2: "", className: "qA1"},
+        {player1: "Lea / Elias", result1: "", player2: "ㅤ", result2: "31.08. 19:00", className: "qA1"},
         {player1: "ㅤ", result1: "28.08. 19:00", player2: "Herbert / Gerhard", result2: "", className: "qA2"},
         {player1: "Peter S. / Andi", result1: "", player2: "Daniel / Philipp", result2: "", className: "qA3"},
         {player1: "Lukas P. / Jakob", result1: "", player2: "Michi / Lukas L.", result2: "", className: "qA4"},
@@ -149,7 +149,7 @@ let womenDoublePlayer = [
 ]
 let womenDoubleResults = [
     "", "6:7 3:6", "29.08. 18:00",
-    "", "26.08. 18:00", "",
-    "7:6 6:3", "26.08. 18:00", "30.08. 14:00",
+    "", "6:1 6:1", "",
+    "7:6 6:3", "1:6 1:6", "30.08. 14:00",
     "29.08. 18:00", "", "30.08. 14:00"
 ]

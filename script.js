@@ -372,18 +372,18 @@ function printDraw(type){
                 <th>Games</th>
             </tr>
             <tr>
-                <td>Marlene / Andrea</td>
+                <td>Amelie / Edith</td>
                 <td>1</td>
                 <td>1</td>
                 <td>2:0</td>
-                <td>13:9</td>
+                <td>12:2</td>
             </tr>
             <tr>
-                <td>Amelie / Edith</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0:0</td>
-                <td>0:0</td>
+                <td>Marlene / Andrea</td>
+                <td>2</td>
+                <td>1</td>
+                <td>2:2</td>
+                <td>15:21</td>
             </tr>
             <tr>
                 <td>Helga / Sabine</td>
