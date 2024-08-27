@@ -333,14 +333,14 @@ function printDraw(type){
             <tr>
                 <th></th>
                 <th class="black"></th>
-                <td></td>
+                <td class="grey"></td>
                 <td></td>
                 <td class="grey"></td>
             </tr>
 
             <tr>
                 <th></th>
-                <td></td>
+                <td class="grey"></td>
                 <th class="black"></th>
                 <td></td>
                 <td></td>
