@@ -12,7 +12,7 @@ let menSingleDraw = [
     [ // Quarterfinal A
         {player1: "Michi", result1: "6:0 6:0", player2: "Severin", result2: "6:1 6:2", className: "qA1"},
         {player1: "Jakob", result1: "6:0 7:6", player2: "ㅤ", result2: "29.08. 15:00", className: "qA2"},
-        {player1: "ㅤ", result1: "28.08. 16:00", player2: "", result2: "", className: "qA3"},
+        {player1: "Thomas", result1: "6:4 6:4", player2: "", result2: "", className: "qA3"},
         {player1: "Peter P.", result1: "6:2 6:2", player2: "Patrick", result2: "6:2 6:0", className: "qA4"},
     ],
     [ // Semifinal A
@@ -28,7 +28,7 @@ let menSingleDraw = [
     [ // Round 2 B
         {player1: "David L.", result1: "", player2: "Andi", result2: "", className: "r2B1"},
         {player1: "David K.", result1: "", player2: "", result2: "", className: "r2B2"},
-        {player1: "", result1: "", player2: "", result2: "", className: "r2B3"},
+        {player1: "Herbert", result1: "", player2: "", result2: "", className: "r2B3"},
         {player1: "Gerhard", result1: "", player2: "Peter S.", result2: "", className: "r2B4"},
     ],
     [ // Quarterfinal B
@@ -78,7 +78,7 @@ let menDoubleDraw = [
     ],
     [ // Semifinal A
         {player1: "", result1: "", player2: "", result2: "", className: "sA1"},
-        {player1: "Peter S. / Andi", result1: "6:0 6:0", player2: "ㅤ", result2: "28.08. 16:00", className: "sA2"},
+        {player1: "Peter S. / Andi", result1: "6:0 6:0", player2: "Michi / Lukas L.", result2: "6:0 6:1", className: "sA2"},
     ],
     [ // Final A
         {player1: "", result1: "", player2: "", result2: "", className: "fA"},
@@ -94,7 +94,7 @@ let menDoubleDraw = [
     ],
     [ // Round 3 B
         {player1: "", result1: "", player2: "Daniel / Philipp", result2: "(3)", className: "qB1"},
-        {player1: "", result1: "", player2: "ㅤ", result2: "(4)", className: "qB2"},
+        {player1: "", result1: "", player2: "Lukas P. / Jakob", result2: "(4)", className: "qB2"},
         {player1: "Bye", result1: "", player2: "ㅤ", result2: "(1)", className: "qB3"},
         {player1: "Bye", result1: "", player2: "ㅤ", result2: "(2)", className: "qB4"},
     ],
