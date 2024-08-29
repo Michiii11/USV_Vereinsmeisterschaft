@@ -379,6 +379,13 @@ function printDraw(type){
                 <td>12:2</td>
             </tr>
             <tr>
+                <td>Helga / Sabine</td>
+                <td>1</td>
+                <td>1</td>
+                <td>2:0</td>
+                <td>12:4</td>
+            </tr>
+            <tr>
                 <td>Marlene / Andrea</td>
                 <td>2</td>
                 <td>1</td>
@@ -386,18 +393,11 @@ function printDraw(type){
                 <td>15:21</td>
             </tr>
             <tr>
-                <td>Helga / Sabine</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0:0</td>
-                <td>0:0</td>
-            </tr>
-            <tr>
                 <td>Karin / Rosa</td>
-                <td>1</td>
+                <td>2</td>
                 <td>0</td>
-                <td>0:2</td>
-                <td>9:13</td>
+                <td>0:4</td>
+                <td>13:25</td>
             </tr>
         </table>
         </div>

@@ -119,7 +119,7 @@ let womenSingleDraw = [
     ],
     [ // Semifinal A
         {player1: "Helga", result1: "6:0 6:0", player2: "Karin", result2: "6:2 6:3", className: "sA1"},
-        {player1: "ㅤ", result1: "29.08. 17:00", player2: "Lea", result2: "6:0 6:0", className: "sA2"},
+        {player1: "Amelie", result1: "6:1 6:2", player2: "Lea", result2: "6:0 6:0", className: "sA2"},
     ],
     [ // Final A
         {player1: "Helga", result1: "6:0 6:2", player2: "", result2: "", className: "fA"},
@@ -129,11 +129,11 @@ let womenSingleDraw = [
     ],
     [ // Round 2 B
         {player1: "Andrea", result1: "", player2: "Edith", result2: "", className: "r2B1"},
-        {player1: "", result1: "", player2: "Rosa", result2: "", className: "r2B2"},
+        {player1: "Marlene", result1: "", player2: "Rosa", result2: "", className: "r2B2"},
     ],
     [ // Semifinal B
         {player1: "", result1: "", player2: "ㅤ", result2: "(2)", className: "sB1"},
-        {player1: "", result1: "", player2: "Karin", result2: "(1)", className: "sB2"},
+        {player1: "ㅤ", result1: "05.09. 18:00", player2: "Karin", result2: "(1)", className: "sB2"},
     ],
     [ // Final B
         {player1: "", result1: "", player2: "", result2: "", className: "fB"},
@@ -148,8 +148,8 @@ let womenDoublePlayer = [
     "Karin / Rosa", "Amelie / Edith", "Marlene / Andrea", "Helga / Sabine",
 ]
 let womenDoubleResults = [
-    "02.09. 18:00", "6:7 3:6", "29.08. 18:00",
+    "02.09. 18:00", "6:7 3:6", "3:6 1:6",
     "02.09. 18:00", "6:1 6:1", "",
     "7:6 6:3", "1:6 1:6", "30.08. 14:00",
-    "29.08. 18:00", "", "30.08. 14:00"
+    "6:3 6:1", "", "30.08. 14:00"
 ]
