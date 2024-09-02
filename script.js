@@ -333,14 +333,14 @@ function printDraw(type){
             <tr>
                 <th></th>
                 <th class="black"></th>
-                <td class="grey"></td>
                 <td></td>
-                <td class="grey"></td>
+                <td></td>
+                <td></td>
             </tr>
 
             <tr>
                 <th></th>
-                <td class="grey"></td>
+                <td></td>
                 <th class="black"></th>
                 <td></td>
                 <td></td>
@@ -351,14 +351,14 @@ function printDraw(type){
                 <td></td>
                 <td></td>
                 <th class="black"></th>
-                <td class="grey"></td>
+                <td></td>
             </tr>
             
             <tr>
                 <th></th>
-                <td class="grey"></td>
                 <td></td>
-                <td class="grey"></td>
+                <td></td>
+                <td></td>
                 <th class="black"></th>
             </tr>
         </table>
@@ -372,18 +372,18 @@ function printDraw(type){
                 <th>Games</th>
             </tr>
             <tr>
+                <td>Amelie / Edith</td>
+                <td>2</td>
+                <td>2</td>
+                <td>4:0</td>
+                <td>24:5</td>
+            </tr>
+            <tr>
                 <td>Helga / Sabine</td>
                 <td>2</td>
                 <td>2</td>
                 <td>4:0</td>
                 <td>24:7</td>
-            </tr>
-            <tr>
-                <td>Amelie / Edith</td>
-                <td>1</td>
-                <td>1</td>
-                <td>2:0</td>
-                <td>12:2</td>
             </tr>
             <tr>
                 <td>Marlene / Andrea</td>
@@ -394,10 +394,10 @@ function printDraw(type){
             </tr>
             <tr>
                 <td>Karin / Rosa</td>
-                <td>2</td>
+                <td>3</td>
                 <td>0</td>
-                <td>0:4</td>
-                <td>13:25</td>
+                <td>0:6</td>
+                <td>16:37</td>
             </tr>
         </table>
         </div>
