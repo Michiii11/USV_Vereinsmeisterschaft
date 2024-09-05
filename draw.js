@@ -132,7 +132,7 @@ let womenSingleDraw = [
         {player1: "Marlene", result1: "", player2: "Rosa", result2: "", className: "r2B2"},
     ],
     [ // Semifinal B
-        {player1: "ㅤ", result1: "05.09. 18:00", player2: "ㅤ", result2: "(2)", className: "sB1"},
+        {player1: "Andrea", result1: "6:2 6:2", player2: "ㅤ", result2: "(2)", className: "sB1"},
         {player1: "ㅤ", result1: "06.09. 14:00", player2: "Karin", result2: "(1)", className: "sB2"},
     ],
     [ // Final B
