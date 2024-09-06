@@ -99,7 +99,7 @@ let menDoubleDraw = [
         {player1: "Bye", result1: "", player2: "ㅤ", result2: "(2)", className: "qB4"},
     ],
     [ // Round 4 B
-        {player1: "Peter P. / Paul", result1: "6:0 6:0", player2: "ㅤ", result2: "06.09. 18:30", className: "sB1"},
+        {player1: "Peter P. / Paul", result1: "6:0 6:0", player2: "Lukas / Jakob", result2: "6:2 6:3", className: "sB1"},
         {player1: "Lea / Elias", result1: "", player2: "", result2: "", className: "sB2"},
     ],
     [ // Round 5 B
