@@ -77,7 +77,7 @@ let menDoubleDraw = [
         {player1: "Lukas P. / Jakob", result1: "", player2: "Michi / Lukas L.", result2: "", className: "qA4"},
     ],
     [ // Semifinal A
-        {player1: "Thomas / David", result1: "3:6 6:4 10:6", player2: "", result2: "", className: "sA1"},
+        {player1: "Thomas / David", result1: "3:6 6:4 10:6", player2: "Herbert / Gerhard", result2: "6:4 7:6", className: "sA1"},
         {player1: "Peter S. / Andi", result1: "6:0 6:0", player2: "Michi / Lukas L.", result2: "6:0 6:1", className: "sA2"},
     ],
     [ // Final A
@@ -96,11 +96,11 @@ let menDoubleDraw = [
         {player1: "Peter P. / Paul", result1: "", player2: "Daniel / Philipp", result2: "(3)", className: "qB1"},
         {player1: "Patrick P. / Mario V.", result1: "", player2: "Lukas P. / Jakob", result2: "(4)", className: "qB2"},
         {player1: "Bye", result1: "", player2: "Lea / Elias", result2: "(1)", className: "qB3"},
-        {player1: "Bye", result1: "", player2: "ㅤ", result2: "(2)", className: "qB4"},
+        {player1: "Bye", result1: "", player2: "Patrick Ö. / Mario O.", result2: "(2)", className: "qB4"},
     ],
     [ // Round 4 B
         {player1: "Peter P. / Paul", result1: "6:0 6:0", player2: "Lukas / Jakob", result2: "6:2 6:3", className: "sB1"},
-        {player1: "Lea / Elias", result1: "", player2: "", result2: "", className: "sB2"},
+        {player1: "Lea / Elias", result1: "", player2: "Patrick Ö. / Mario O.", result2: "", className: "sB2"},
     ],
     [ // Round 5 B
         {player1: "", result1: "", player2: "", result2: "", className: "fB"},
