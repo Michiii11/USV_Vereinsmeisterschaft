@@ -16,11 +16,11 @@ let menSingleDraw = [
         {player1: "Peter P.", result1: "6:2 6:2", player2: "Patrick", result2: "6:2 6:0", className: "qA4"},
     ],
     [ // Semifinal A
-        {player1: "Michi", result1: "6:0 6:0", player2: "", result2: "", className: "sA1"},
+        {player1: "Michi", result1: "6:0 6:0", player2: "Elias", result2: "6:2 6:0", className: "sA1"},
         {player1: "", result1: "", player2: "Patrick", result2: "6:0 6:2", className: "sA2"},
     ],
     [ // Final A
-        {player1: "", result1: "", player2: "", result2: "", className: "fA"},
+        {player1: "ㅤ", result1: "21.09. 14:00", player2: "", result2: "", className: "fA"},
     ],
     [ // Winner A
         {player1: "", result1: "", className: "wA"},
@@ -33,9 +33,9 @@ let menSingleDraw = [
     ],
     [ // Quarterfinal B
         {player1: "", result1: "", player2: "ㅤ", result2: "(3)", className: "qB1"},
-        {player1: "", result1: "", player2: "Peter P.", result2: "(4)", className: "qB2"},
+        {player1: "ㅤ", result1: "18.09. 15:00", player2: "Peter P.", result2: "(4)", className: "qB2"},
         {player1: "Herbert", result1: "6:0 6:0", player2: "Severin", result2: "(1)", className: "qB3"},
-        {player1: "Peter S.", result1: "6:3 6:1", player2: "ㅤ", result2: "(2)", className: "qB4"},
+        {player1: "Peter S.", result1: "6:3 6:1", player2: "Jakob", result2: "(2)", className: "qB4"},
     ],
     [ // Semifinal B
         {player1: "", result1: "", player2: "", result2: "", className: "sB1"},
@@ -122,7 +122,7 @@ let womenSingleDraw = [
         {player1: "Amelie", result1: "6:1 6:2", player2: "Lea", result2: "6:0 6:0", className: "sA2"},
     ],
     [ // Final A
-        {player1: "Helga", result1: "6:0 6:2", player2: "", result2: "", className: "fA"},
+        {player1: "Helga", result1: "6:0 6:2", player2: "ㅤ", result2: "22.09. 14:00", className: "fA"},
     ],
     [ // Winner A
         {player1: "", result1: "", className: "wA"},
@@ -149,7 +149,7 @@ let womenDoublePlayer = [
 ]
 let womenDoubleResults = [
     "2:6 1:6", "6:7 3:6", "3:6 1:6",
-    "6:2 6:1", "6:1 6:1", "16.09. 18:00",
+    "6:2 6:1", "6:1 6:1", "20.09. 16:30",
     "7:6 6:3", "1:6 1:6", "2:6 1:6",
-    "6:3 6:1", "16.09. 18:00", "6:2 6:1"
+    "6:3 6:1", "20.09. 16:30", "6:2 6:1"
 ]
