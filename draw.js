@@ -33,7 +33,7 @@ let menSingleDraw = [
     ],
     [ // Quarterfinal B
         {player1: "Andi", result1: "6:1 6:1", player2: "ㅤ", result2: "(3)", className: "qB1"},
-        {player1: "ㅤ", result1: "18.09. 15:00", player2: "Peter P.", result2: "(4)", className: "qB2"},
+        {player1: "ㅤ", result1: "", player2: "Peter P.", result2: "(4)", className: "qB2"},
         {player1: "Herbert", result1: "6:0 6:0", player2: "Severin", result2: "(1)", className: "qB3"},
         {player1: "Peter S.", result1: "6:3 6:1", player2: "Jakob", result2: "(2)", className: "qB4"},
     ],
