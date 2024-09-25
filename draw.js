@@ -39,13 +39,13 @@ let menSingleDraw = [
     ],
     [ // Semifinal B
         {player1: "Andi", result1: "w. o.", player2: "ㅤ", result2: "26.09. 11:00", className: "sB1"},
-        {player1: "Herbert", result1: "w. o.", player2: "ㅤ", result2: "25.09. 16:30", className: "sB2"},
+        {player1: "Herbert", result1: "w. o.", player2: "Jakob.", result2: "6:4 6:2", className: "sB2"},
     ],
     [ // Final B
         {player1: "ㅤ", result1: "", player2: "", result2: "", className: "fB"},
     ],
     [ // Winner B
-        {player1: "ㅤ", result1: "", className: "wB"},
+        {player1: "ㅤ", result1: "29.09. 11:00", className: "wB"},
     ],
     [ // Semifinal C
         {player1: "David L.", result1: "(5)", player2: "David K.", result2: "(6)", className: "rC1"},
@@ -103,10 +103,10 @@ let menDoubleDraw = [
         {player1: "Lea / Elias", result1: "", player2: "Patrick Ö. / Mario O.", result2: "", className: "sB2"},
     ],
     [ // Round 5 B
-        {player1: "ㅤ", result1: "26.09. 17:00", player2: "ㅤ", result2: "25.09. 19:00", className: "fB"},
+        {player1: "ㅤ", result1: "26.09. 17:00", player2: "Lea / Elias", result2: "6:3 0:6 7:6", className: "fB"},
     ],
     [ // Winner B
-        {player1: "", result1: "", className: "wB"},
+        {player1: "ㅤ", result1: "28.09.", className: "wB"},
     ],
 ];
 
@@ -136,10 +136,10 @@ let womenSingleDraw = [
         {player1: "Marlene", result1: "6:2 5:7 6:1", player2: "Karin", result2: "(1)", className: "sB2"},
     ],
     [ // Final B
-        {player1: "", result1: "", player2: "Karin", result2: "6:3 6:0", className: "fB"},
+        {player1: "ㅤ", result1: "26.09. 14:30", player2: "Karin", result2: "6:3 6:0", className: "fB"},
     ],
     [ // Winner B
-        {player1: "", result1: "", className: "wB"},
+        {player1: "ㅤ", result1: "29.09. 12:30", className: "wB"},
     ],
 ];
 
