@@ -52,7 +52,7 @@ let menSingleDraw = [
         {player1: "Lukas P.", result1: "(7)", player2: "Gerhard", result2: "(8)", className: "rC2"},
     ],
     [ // Final C
-        {player1: "ㅤ", result1: "", player2: "ㅤ", result2: "25.09. 16:30", className: "fC"},
+        {player1: "ㅤ", result1: "", player2: "Gerhard", result2: "6:2 6:2", className: "fC"},
     ],
     [ // Winner C
         {player1: "ㅤ", result1: "", className: "wC"},
