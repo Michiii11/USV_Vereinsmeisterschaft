@@ -38,11 +38,11 @@ let menSingleDraw = [
         {player1: "Peter S.", result1: "6:3 6:1", player2: "Jakob", result2: "(2)", className: "qB4"},
     ],
     [ // Semifinal B
-        {player1: "Andi", result1: "w. o.", player2: "ㅤ", result2: "26.09. 11:00", className: "sB1"},
+        {player1: "Andi", result1: "w. o.", player2: "Peter P.", result2: "6:2 6:2", className: "sB1"},
         {player1: "Herbert", result1: "w. o.", player2: "Jakob.", result2: "6:4 6:2", className: "sB2"},
     ],
     [ // Final B
-        {player1: "ㅤ", result1: "", player2: "", result2: "", className: "fB"},
+        {player1: "ㅤ", result1: "", player2: "ㅤ", result2: "27.09. 16:30", className: "fB"},
     ],
     [ // Winner B
         {player1: "ㅤ", result1: "29.09. 11:00", className: "wB"},
@@ -52,7 +52,7 @@ let menSingleDraw = [
         {player1: "Lukas P.", result1: "(7)", player2: "Gerhard", result2: "(8)", className: "rC2"},
     ],
     [ // Final C
-        {player1: "ㅤ", result1: "", player2: "ㅤ", result2: "25.09. 16:30", className: "fC"},
+        {player1: "ㅤ", result1: "", player2: "Gerhard", result2: "6:2 6:2", className: "fC"},
     ],
     [ // Winner C
         {player1: "ㅤ", result1: "", className: "wC"},
