@@ -42,7 +42,7 @@ let menSingleDraw = [
         {player1: "Herbert", result1: "w. o.", player2: "Jakob.", result2: "6:4 6:2", className: "sB2"},
     ],
     [ // Final B
-        {player1: "ㅤ", result1: "28.09. 14:00", player2: "ㅤ", result2: "27.09. 16:30", className: "fB"},
+        {player1: "ㅤ", result1: "28.09. 14:00", player2: "Herbert", result2: "6:0 6:1", className: "fB"},
     ],
     [ // Winner B
         {player1: "ㅤ", result1: "29.09. 11:00", className: "wB"},
