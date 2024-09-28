@@ -23,7 +23,7 @@ let menSingleDraw = [
         {player1: "Michi", result1: "6:1 6:0", player2: "Patrick", result2: "6:1 6:2", className: "fA"},
     ],
     [ // Winner A
-        {player1: "ㅤ", result1: "29.09. 14:00", className: "wA"},
+        {player1: "ㅤ", result1: "29.09. 13:30", className: "wA"},
     ],
     [ // Round 2 B
         {player1: "David L.", result1: "", player2: "Andi", result2: "", className: "r2B1"},
@@ -42,10 +42,10 @@ let menSingleDraw = [
         {player1: "Herbert", result1: "w. o.", player2: "Jakob", result2: "6:4 6:2", className: "sB2"},
     ],
     [ // Final B
-        {player1: "ㅤ", result1: "28.09. 14:00", player2: "Herbert", result2: "6:0 6:1", className: "fB"},
+        {player1: "Andi", result1: "1:6 7:5 6:4", player2: "Herbert", result2: "6:0 6:1", className: "fB"},
     ],
     [ // Winner B
-        {player1: "ㅤ", result1: "29.09. 12:30", className: "wB"},
+        {player1: "ㅤ", result1: "29.09. 16:30", className: "wB"},
     ],
     [ // Semifinal C
         {player1: "David L.", result1: "(5)", player2: "David K.", result2: "(6)", className: "rC1"},
@@ -106,7 +106,7 @@ let menDoubleDraw = [
         {player1: "Peter P. / Paul", result1: "6:0 6:4", player2: "Lea / Elias", result2: "6:3 0:6 7:6", className: "fB"},
     ],
     [ // Winner B
-        {player1: "ㅤ", result1: "29.09. 17:00", className: "wB"},
+        {player1: "ㅤ", result1: "29.09. 16:30", className: "wB"},
     ],
 ];
 
@@ -125,7 +125,7 @@ let womenSingleDraw = [
         {player1: "Helga", result1: "6:0 6:2", player2: "Lea", result2: "6:3 4:6 6:2", className: "fA"},
     ],
     [ // Winner A
-        {player1: "ㅤ", result1: "29.09. 15:30", className: "wA"},
+        {player1: "ㅤ", result1: "29.09. 15:00", className: "wA"},
     ],
     [ // Round 2 B
         {player1: "Andrea", result1: "", player2: "Edith", result2: "", className: "r2B1"},
@@ -139,7 +139,7 @@ let womenSingleDraw = [
         {player1: "Amelie", result1: "6:0 6:2", player2: "Karin", result2: "6:3 6:0", className: "fB"},
     ],
     [ // Winner B
-        {player1: "ㅤ", result1: "29.09. 15:30", className: "wB"},
+        {player1: "ㅤ", result1: "29.09. 15:00", className: "wB"},
     ],
 ];
 
