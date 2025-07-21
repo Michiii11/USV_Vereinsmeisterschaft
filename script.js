@@ -20,8 +20,7 @@ function getDraw(type, elem) {
 
 
     switch (type) {
-        case 'menSingle': draw =
-            menSingleDraw; printDraw(16); addCEvent();
+        case 'menSingle': draw = menSingleDraw; printDraw(16); addCEvent();
             document.querySelector("main.cEvent").style.display = "flex"
             break;
         case 'menDouble': draw = menDoubleDraw; printDraw(16);
@@ -36,406 +35,339 @@ function getDraw(type, elem) {
             }
             break;
         case 'womenSingle': draw = womenSingleDraw; printDraw(8); break;
-        case 'womenDouble': printDraw(4); womenDoubleDraw(); return;
+        case 'womenDouble': printDraw(4); fillRoundRobinMatrix(womenDoubleDraw); return;
     }
 
-
-    draw.forEach(round => {
-        round.forEach(match => {
+    draw.rounds.forEach(round => {
+        round.matches.forEach(match => {
             let bracket = document.querySelector(`.${match.className}`);
             if (bracket) {
                 let player1 = bracket.querySelectorAll("div.person")[0].querySelectorAll("p");
                 if(bracket.querySelectorAll("div.person")[1]) {
                     let player2 = bracket.querySelectorAll("div.person")[1].querySelectorAll("p");
                     player2[0].innerHTML = match.player2
-
-                    if(match.result2 !== undefined){
-                        player2[1].innerHTML = match.result2 !== "" ? match.result2 : "ㅤ"
-                    }
+                    player2[1].innerHTML = match.result2
                 }
 
                 player1[0].innerHTML = match.player1
-                if(match.result1 !== undefined) {
-                    player1[1].innerHTML = match.result1 !== "" ? match.result1 : "ㅤ"
-                }
+                player1[1].innerHTML = match.result1
             }
-        });
+        })
     });
 }
 
-function womenDoubleDraw(){
-    let nameFields =  document.querySelectorAll("table:not(.erg) th:not(.black)")
-    for (let i = 0; i < nameFields.length; i++) {
-        nameFields[i].innerHTML = womenDoublePlayer[i]
+function fillRoundRobinMatrix(tournament) {
+    // Teams aus der ersten Runde extrahieren
+    const teams = [
+        tournament.rounds[0].matches[0].player1,
+        tournament.rounds[0].matches[0].player2,
+        tournament.rounds[0].matches[1].player2,
+        tournament.rounds[0].matches[2].player2
+    ];
+    const table = document.querySelector("table:not(.erg)");
+    if (!table) return;
+
+    // Alle Matches sammeln
+    const matches = tournament.rounds.flatMap(r => r.matches);
+
+    // Kopf- und Seitenzeile füllen
+    for (let i = 0; i < teams.length; i++) {
+        if (table.rows[0] && table.rows[0].cells[i + 1])
+            table.rows[0].cells[i + 1].textContent = teams[i];
+        if (table.rows[i + 1] && table.rows[i + 1].cells[0])
+            table.rows[i + 1].cells[0].textContent = teams[i];
     }
 
-    let resultFields =  document.querySelectorAll("table:not(.erg) td")
-    for (let i = 0; i < resultFields.length; i++) {
-        resultFields[i].innerHTML = womenDoubleResults[i]
+    // Ergebnisse in beide Richtungen eintragen
+    for (let i = 0; i < teams.length; i++) {
+        for (let j = 0; j < teams.length; j++) {
+            if (i === j) continue;
+            const match = matches.find(m =>
+                m.player1 === teams[i] && m.player2 === teams[j]
+            );
+            if (match && table.rows[i + 1] && table.rows[i + 1].cells[j + 1]) {
+                table.rows[i + 1].cells[j + 1].textContent = match.result1;
+            }
+            // Rückspiel (aus Sicht von j)
+            const reverseMatch = matches.find(m =>
+                m.player1 === teams[j] && m.player2 === teams[i]
+            );
+            if (reverseMatch && table.rows[j + 1] && table.rows[j + 1].cells[i + 1]) {
+                table.rows[j + 1].cells[i + 1].textContent = reverseMatch.result1;
+            }
+        }
     }
 }
+
 function printDraw(type){
-    if(type === 16){
-        document.querySelector("main").innerHTML = `
-        <div class="left">
-            <div class="column" style="--top: 6.25%;">
-                <div class="bracket wB">
-                    <div class="person"><p></p><p></p></div>
-                </div>
-            </div>
+    if (type === 16) {
+        const main = document.querySelector("main");
+        main.innerHTML = "";
 
-            <div class="column" style="grid-template-rows: 1fr; --top: 6.25%;">
-                <div class="bracket fB">
-                    <div class="person"><p></p><p></p></div>
-                    <div class="person"><p></p><p></p></div>
-                </div>
-            </div>
+        function createBracket(bracketClass, persons = 2, span = null) {
+            const div = document.createElement("div");
+            div.className = `bracket ${bracketClass}`;
+            for (let i = 0; i < persons; i++) {
+                const person = document.createElement("div");
+                person.className = "person";
+                person.innerHTML = "<p></p><p></p>";
+                div.appendChild(person);
+            }
+            if (span) {
+                const s = document.createElement("span");
+                if (span.className) s.className = span.className;
+                s.textContent = span.text;
+                div.appendChild(s);
+            }
+            return div;
+        }
 
-            <div class="column" style="grid-template-rows: 1fr 1fr; --top: 6.25%;">
-                <div class="bracket sB1">
-                    <div class="person"><p></p><p></p></div>
-                    <div class="person"><p></p><p></p></div>
-                </div>
-                <div class="bracket sB2">
-                    <div class="person"><p></p><p></p></div>
-                    <div class="person"><p></p><p></p></div>
-                </div>
-            </div>
+        // Linke Seite
+        const left = document.createElement("div");
+        left.className = "left";
+        [
+            { style: { "--top": "6.25%" }, brackets: [ ["wB", 1] ] },
+            { style: { "grid-template-rows": "1fr", "--top": "6.25%" }, brackets: [ ["fB", 2] ] },
+            { style: { "grid-template-rows": "1fr 1fr", "--top": "6.25%" }, brackets: [ ["sB1", 2], ["sB2", 2] ] },
+            { style: { "grid-template-rows": "repeat(4, 1fr)", "--top": "6.25%" }, brackets: [ ["qB1", 2], ["qB2", 2], ["qB3", 2], ["qB4", 2] ] },
+            { style: { "grid-template-rows": "1fr 1fr 1fr 1fr" }, brackets: [
+                    ["r2B1", 2, { className: "right", text: "(5)" }],
+                    ["r2B2", 2, { className: "right", text: "(6)" }],
+                    ["r2B3", 2, { className: "right", text: "(7)" }],
+                    ["r2B4", 2, { className: "right", text: "(8)" }]
+                ] }
+        ].forEach(col => {
+            const column = document.createElement("div");
+            column.className = "column";
+            Object.entries(col.style).forEach(([k, v]) => column.style.setProperty(k, v));
+            col.brackets.forEach(([cls, persons, span]) => column.appendChild(createBracket(cls, persons, span)));
+            left.appendChild(column);
+        });
 
-            <div class="column" style="grid-template-rows: repeat(4, 1fr); --top: 6.25%;">
-                <div class="bracket qB1">
-                    <div class="person"><p></p><p></p></div>
-                    <div class="person"><p></p><p></p></div>
-                </div>
-                <div class="bracket qB2">
-                    <div class="person"><p></p><p></p></div>
-                    <div class="person"><p></p><p></p></div>
-                </div>
-                <div class="bracket qB3">
-                    <div class="person"><p></p><p></p></div>
-                    <div class="person"><p></p><p></p></div>
-                </div>
-                <div class="bracket qB4">
-                    <div class="person"><p></p><p></p></div>
-                    <div class="person"><p></p><p></p></div>
-                </div>
-            </div>
+        // Mitte
+        const center = document.createElement("div");
+        center.className = "center column";
+        for (let i = 1; i <= 8; i++) {
+            center.appendChild(createBracket(`r${i}`));
+        }
 
-            <div class="column" style="grid-template-rows: 1fr 1fr 1fr 1fr;">
-                <div class="bracket r2B1">
-                    <div class="person"><p></p><p></p></div>
-                    <div class="person"><p></p><p></p></div>
-                    <span class="right">(5)</span>
-                </div>
-                <div class="bracket r2B2">
-                    <div class="person"><p></p><p></p></div>
-                    <div class="person"><p></p><p></p></div>
-                    <span class="right">(6)</span>
-                </div>
-                <div class="bracket r2B3">
-                    <div class="person"><p></p><p></p></div>
-                    <div class="person"><p></p><p></p></div>
-                    <span class="right">(7)</span>
-                </div>
-                <div class="bracket r2B4">
-                    <div class="person"><p></p><p></p></div>
-                    <div class="person"><p></p><p></p></div>
-                    <span class="right">(8)</span>
-                </div>
-            </div>
-        </div>
-        <div class="center column">
-            <div class="bracket r1">
-                <div class="person"><p></p><p></p></div>
-                <div class="person"><p></p><p></p></div>
-            </div>
-            <div class="bracket r2">
-                <div class="person"><p></p><p></p></div>
-                <div class="person"><p></p><p></p></div>
-            </div>
-            <div class="bracket r3">
-                <div class="person"><p></p><p></p></div>
-                <div class="person"><p></p><p></p></div>
-            </div>
-            <div class="bracket r4">
-                <div class="person"><p></p><p></p></div>
-                <div class="person"><p></p><p></p></div>
-            </div>
-            <div class="bracket r5">
-                <div class="person"><p></p><p></p></div>
-                <div class="person"><p></p><p></p></div>
-            </div>
-            <div class="bracket r6">
-                <div class="person"><p></p><p></p></div>
-                <div class="person"><p></p><p></p></div>
-            </div>
-            <div class="bracket r7">
-                <div class="person"><p></p><p></p></div>
-                <div class="person"><p></p><p></p></div>
-            </div>
-            <div class="bracket r8">
-                <div class="person"><p></p><p></p></div>
-                <div class="person"><p></p><p></p></div>
-            </div>
-        </div>
-        <div class="right">
-            <div class="column" style="grid-template-rows: 1fr 1fr 1fr 1fr;">
-                <div class="bracket qA1">
-                    <div class="person"><p></p><p></p></div>
-                    <div class="person"><p></p><p></p></div>
-                    <span>(1)</span>
-                </div>
-                <div class="bracket qA2">
-                    <div class="person"><p></p><p></p></div>
-                    <div class="person"><p></p><p></p></div>
-                    <span>(2)</span>
-                </div>
-                <div class="bracket qA3">
-                    <div class="person"><p></p><p></p></div>
-                    <div class="person"><p></p><p></p></div>
-                    <span>(3)</span>
-                </div>
-                <div class="bracket qA4">
-                    <div class="person"><p></p><p></p></div>
-                    <div class="person"><p></p><p></p></div>
-                    <span>(4)</span>
-                </div>
-            </div>
+        // Rechte Seite
+        const right = document.createElement("div");
+        right.className = "right";
+        [
+            { style: { "grid-template-rows": "1fr 1fr 1fr 1fr" }, brackets: [
+                    ["qA1", 2, { text: "(1)" }],
+                    ["qA2", 2, { text: "(2)" }],
+                    ["qA3", 2, { text: "(3)" }],
+                    ["qA4", 2, { text: "(4)" }]
+                ] },
+            { style: { "grid-template-rows": "1fr 1fr" }, brackets: [ ["sA1", 2], ["sA2", 2] ] },
+            { style: { "grid-template-rows": "1fr" }, brackets: [ ["fA", 2] ] },
+            { style: { "--top": "6.25%" }, brackets: [ ["wA", 1] ] }
+        ].forEach(col => {
+            const column = document.createElement("div");
+            column.className = "column";
+            Object.entries(col.style).forEach(([k, v]) => column.style.setProperty(k, v));
+            col.brackets.forEach(([cls, persons, span]) => column.appendChild(createBracket(cls, persons, span)));
+            right.appendChild(column);
+        });
 
-            <div class="column" style="grid-template-rows: 1fr 1fr;">
-                <div class="bracket sA1">
-                    <div class="person"><p></p><p></p></div>
-                    <div class="person"><p></p><p></p></div>
-                </div>
-                <div class="bracket sA2">
-                    <div class="person"><p></p><p></p></div>
-                    <div class="person"><p></p><p></p></div>
-                </div>
-            </div>
-
-            <div class="column" style="grid-template-rows: 1fr;">
-                <div class="bracket fA">
-                    <div class="person"><p></p><p></p></div>
-                    <div class="person"><p></p><p></p></div>
-                </div>
-            </div>
-
-            <div class="column" style="--top: 6.25%;">
-                <div class="bracket wA">
-                    <div class="person"><p></p><p></p></div>
-                </div>
-            </div>
-        </div>
-        `
+        main.appendChild(left);
+        main.appendChild(center);
+        main.appendChild(right);
     }
 
-    if(type === 8){
-        document.querySelector("main").style.height = "50%"
-        document.querySelector("main").style.width = "max(75%, 800px)"
+    if (type === 8) {
+        const main = document.querySelector("main");
+        main.style.height = "50%";
+        main.style.width = "max(75%, 800px)";
+        main.innerHTML = "";
 
-        document.querySelector("main").innerHTML = `
-        <div class="left">
-            <div class="column" style="--top: 12.5%;">
-                <div class="bracket wB">
-                    <div class="person"><p></p><p></p></div>
-                </div>
-            </div>
+        function createBracket(bracketClass, persons = 2, span = null) {
+            const div = document.createElement("div");
+            div.className = `bracket ${bracketClass}`;
+            for (let i = 0; i < persons; i++) {
+                const person = document.createElement("div");
+                person.className = "person";
+                person.innerHTML = "<p></p><p></p>";
+                div.appendChild(person);
+            }
+            if (span) {
+                const s = document.createElement("span");
+                if (span.className) s.className = span.className;
+                s.textContent = span.text;
+                div.appendChild(s);
+            }
+            return div;
+        }
 
-            <div class="column" style="grid-template-rows: 1fr; --top: 12.55%;">
-                <div class="bracket fB">
-                    <div class="person"><p></p><p></p></div>
-                    <div class="person"><p></p><p></p></div>
-                </div>
-            </div>
+        // Linke Seite
+        const left = document.createElement("div");
+        left.className = "left";
+        [
+            { style: { "--top": "12.5%" }, brackets: [ ["wB", 1] ] },
+            { style: { "grid-template-rows": "1fr", "--top": "12.55%" }, brackets: [ ["fB", 2] ] },
+            { style: { "grid-template-rows": "1fr 1fr", "--top": "12.50%" }, brackets: [ ["sB1", 2], ["sB2", 2] ] },
+            { style: { "grid-template-rows": "repeat(2, 1fr)" }, brackets: [ ["r2B1", 2], ["r2B2", 2] ] }
+        ].forEach(col => {
+            const column = document.createElement("div");
+            column.className = "column";
+            Object.entries(col.style).forEach(([k, v]) => column.style.setProperty(k, v));
+            col.brackets.forEach(([cls, persons, span]) => column.appendChild(createBracket(cls, persons, span)));
+            left.appendChild(column);
+        });
 
-            <div class="column" style="grid-template-rows: 1fr 1fr; --top: 12.50%;">
-                <div class="bracket sB1">
-                    <div class="person"><p></p><p></p></div>
-                    <div class="person"><p></p><p></p></div>
-                </div>
-                <div class="bracket sB2">
-                    <div class="person"><p></p><p></p></div>
-                    <div class="person"><p></p><p></p></div>
-                </div>
-            </div>
+        // Mitte
+        const center = document.createElement("div");
+        center.className = "center column";
+        center.style.setProperty("grid-template-rows", "repeat(4, 1fr)");
+        for (let i = 1; i <= 4; i++) {
+            center.appendChild(createBracket(`r${i}`));
+        }
 
-            <div class="column" style="grid-template-rows: repeat(2, 1fr);">
-                <div class="bracket r2B1">
-                    <div class="person"><p></p><p></p></div>
-                    <div class="person"><p></p><p></p></div>
-                </div>
-                <div class="bracket r2B2">
-                    <div class="person"><p></p><p></p></div>
-                    <div class="person"><p></p><p></p></div>
-                </div>
-            </div>
-        </div>
-        <div class="center column" style="grid-template-rows: repeat(4, 1fr);">
-            <div class="bracket r1">
-                <div class="person"><p></p><p></p></div>
-                <div class="person"><p></p><p></p></div>
-            </div>
-            <div class="bracket r2">
-                <div class="person"><p></p><p></p></div>
-                <div class="person"><p></p><p></p></div>
-            </div>
-            <div class="bracket r3">
-                <div class="person"><p></p><p></p></div>
-                <div class="person"><p></p><p></p></div>
-            </div>
-            <div class="bracket r4">
-                <div class="person"><p></p><p></p></div>
-                <div class="person"><p></p><p></p></div>
-            </div>
-        </div>
-        <div class="right">
-            <div class="column" style="grid-template-rows: 1fr 1fr;">
-                <div class="bracket sA1">
-                    <div class="person"><p></p><p></p></div>
-                    <div class="person"><p></p><p></p></div>
-                    <span>(1)</span>
-                </div>
-                <div class="bracket sA2">
-                    <div class="person"><p></p><p></p></div>
-                    <div class="person"><p></p><p></p></div>
-                    <span>(2)</span>
-                </div>
-            </div>
+        // Rechte Seite
+        const right = document.createElement("div");
+        right.className = "right";
+        [
+            { style: { "grid-template-rows": "1fr 1fr" }, brackets: [
+                    ["sA1", 2, { text: "(1)" }],
+                    ["sA2", 2, { text: "(2)" }]
+                ] },
+            { style: { "grid-template-rows": "1fr" }, brackets: [ ["fA", 2] ] },
+            { style: { "--top": "6.25%" }, brackets: [ ["wA", 1] ] }
+        ].forEach(col => {
+            const column = document.createElement("div");
+            column.className = "column";
+            Object.entries(col.style).forEach(([k, v]) => column.style.setProperty(k, v));
+            col.brackets.forEach(([cls, persons, span]) => column.appendChild(createBracket(cls, persons, span)));
+            right.appendChild(column);
+        });
 
-            <div class="column" style="grid-template-rows: 1fr;">
-                <div class="bracket fA">
-                    <div class="person"><p></p><p></p></div>
-                    <div class="person"><p></p><p></p></div>
-                </div>
-            </div>
-
-            <div class="column" style="--top: 6.25%;">
-                <div class="bracket wA">
-                    <div class="person"><p></p><p></p></div>
-                </div>
-            </div>
-        </div>
-        `
+        main.appendChild(left);
+        main.appendChild(center);
+        main.appendChild(right);
     }
 
-    if(type === 4){
-        document.querySelector("main").innerHTML = `
-        <div class="roundRobin">
-        <table>
-            <tr>
-                <th class="black"></th>
-                <th></th>
-                <th></th>
-                <th></th>
-                <th></th>
-            </tr>
+    if (type === 4) {
+        const main = document.querySelector("main");
+        main.innerHTML = "";
 
-            <tr>
-                <th></th>
-                <th class="black"></th>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
+        // Datenstruktur für Spieler und Ergebnisse
+        const roundRobinData = [
+            { name: "Helga / Sabine", spiele: 3, siege: 3, saetze: "6:0", games: "38:17" },
+            { name: "Amelie / Edith", spiele: 3, siege: 2, saetze: "4:2", games: "34:19" },
+            { name: "Marlene / Andrea", spiele: 3, siege: 1, saetze: "2:4", games: "18:33" },
+            { name: "Karin / Rosa", spiele: 3, siege: 0, saetze: "0:6", games: "16:37" }
+        ];
 
-            <tr>
-                <th></th>
-                <td></td>
-                <th class="black"></th>
-                <td></td>
-                <td></td>
-            </tr>
+        // Erzeuge das Grundgerüst
+        const wrapper = document.createElement("div");
+        wrapper.className = "roundRobin";
 
-            <tr>
-                <th></th>
-                <td></td>
-                <td></td>
-                <th class="black"></th>
-                <td></td>
-            </tr>
-            
-            <tr>
-                <th></th>
-                <td></td>
-                <td></td>
-                <td></td>
-                <th class="black"></th>
-            </tr>
-        </table>
-        
-        <table class="erg">
-            <tr>
-                <th>Spieler</th>
-                <th>Spiele</th>
-                <th>Siege</th>
-                <th>Sätze</th>
-                <th>Games</th>
-            </tr>
-            <tr>
-                <td>Helga / Sabine</td>
-                <td>3</td>
-                <td>3</td>
-                <td>6:0</td>
-                <td>38:17</td>
-            </tr>
-            <tr>
-                <td>Amelie / Edith</td>
-                <td>3</td>
-                <td>2</td>
-                <td>4:2</td>
-                <td>34:19</td>
-            </tr>
-            <tr>
-                <td>Marlene / Andrea</td>
-                <td>3</td>
-                <td>1</td>
-                <td>2:4</td>
-                <td>18:33</td>
-            </tr>
-            <tr>
-                <td>Karin / Rosa</td>
-                <td>3</td>
-                <td>0</td>
-                <td>0:6</td>
-                <td>16:37</td>
-            </tr>
-        </table>
-        </div>
-        `
+        // Erste Tabelle (Matrix)
+        const table = document.createElement("table");
+        for (let i = 0; i <= roundRobinData.length; i++) {
+            const tr = document.createElement("tr");
+            for (let j = 0; j <= roundRobinData.length; j++) {
+                if (i === 0 && j === 0) {
+                    const th = document.createElement("th");
+                    th.className = "black";
+                    tr.appendChild(th);
+                } else if (i === 0) {
+                    const th = document.createElement("th");
+                    th.textContent = "";
+                    tr.appendChild(th);
+                } else if (j === 0) {
+                    const th = document.createElement("th");
+                    th.textContent = "";
+                    tr.appendChild(th);
+                } else if (i === j) {
+                    const th = document.createElement("th");
+                    th.className = "black";
+                    tr.appendChild(th);
+                } else {
+                    const td = document.createElement("td");
+                    td.textContent = ""; // Hier könnten Spielergebnisse eingetragen werden
+                    tr.appendChild(td);
+                }
+            }
+            table.appendChild(tr);
+        }
+        wrapper.appendChild(table);
+
+        // Ergebnistabelle
+        const ergTable = document.createElement("table");
+        ergTable.className = "erg";
+        const header = document.createElement("tr");
+        ["Spieler", "Spiele", "Siege", "Sätze", "Games"].forEach(text => {
+            const th = document.createElement("th");
+            th.textContent = text;
+            header.appendChild(th);
+        });
+        ergTable.appendChild(header);
+
+        roundRobinData.forEach(row => {
+            const tr = document.createElement("tr");
+            [row.name, row.spiele, row.siege, row.saetze, row.games].forEach(val => {
+                const td = document.createElement("td");
+                td.textContent = val;
+                tr.appendChild(td);
+            });
+            ergTable.appendChild(tr);
+        });
+        wrapper.appendChild(ergTable);
+
+        main.appendChild(wrapper);
     }
 }
 
-function addCEvent(){
-    document.querySelector("main.cEvent").style.height = "50%"
-    document.querySelector("main.cEvent").style.width = "max(75%, 800px)"
+function addCEvent() {
+    const main = document.querySelector("main.cEvent");
+    main.style.height = "50%";
+    main.style.width = "max(75%, 800px)";
+    main.innerHTML = "";
 
-    document.querySelector("main.cEvent").innerHTML = `
-        <div class="left"></div>
-        <div class="center column" style="grid-template-rows: repeat(2, 1fr);">
-            <div class="bracket rC1">
-                <div class="person"><p></p><p></p></div>
-                <div class="person"><p></p><p></p></div>
-            </div>
-            <div class="bracket rC2">
-                <div class="person"><p></p><p></p></div>
-                <div class="person"><p></p><p></p></div>
-            </div>
-        </div>
-        <div class="right">
-            <div class="column" style="grid-template-rows: 1fr;">
-                <div class="bracket fC">
-                    <div class="person"><p></p><p></p></div>
-                    <div class="person"><p></p><p></p></div>
-                </div>
-            </div>
+    function createBracket(bracketClass, persons = 2) {
+        const div = document.createElement("div");
+        div.className = `bracket ${bracketClass}`;
+        for (let i = 0; i < persons; i++) {
+            const person = document.createElement("div");
+            person.className = "person";
+            person.innerHTML = "<p></p><p></p>";
+            div.appendChild(person);
+        }
+        return div;
+    }
 
-            <div class="column" style="--top: 6.25%;">
-                <div class="bracket wC">
-                    <div class="person"><p></p><p></p></div>
-                </div>
-            </div>
-        </div>
-        `
+    // Linke Seite (leer)
+    const left = document.createElement("div");
+    left.className = "left";
+
+    // Mitte
+    const center = document.createElement("div");
+    center.className = "center column";
+    center.style.setProperty("grid-template-rows", "repeat(2, 1fr)");
+    ["rC1", "rC2"].forEach(cls => {
+        center.appendChild(createBracket(cls));
+    });
+
+    // Rechte Seite
+    const right = document.createElement("div");
+    right.className = "right";
+    [
+        { style: { "grid-template-rows": "1fr" }, brackets: [ ["fC", 2] ] },
+        { style: { "--top": "6.25%" }, brackets: [ ["wC", 1] ] }
+    ].forEach(col => {
+        const column = document.createElement("div");
+        column.className = "column";
+        Object.entries(col.style).forEach(([k, v]) => column.style.setProperty(k, v));
+        col.brackets.forEach(([cls, persons]) => column.appendChild(createBracket(cls, persons)));
+        right.appendChild(column);
+    });
+
+    main.appendChild(left);
+    main.appendChild(center);
+    main.appendChild(right);
 }
 
 getDraw("menSingle")
