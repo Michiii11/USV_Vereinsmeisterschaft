@@ -21,6 +21,16 @@ const menSingleDraw = new Tournament("Herren Einzel", [
         new Match("", "", "&nbsp", "&nbsp", "r2B3"),
         new Match("", "Bye", "&nbsp", "&nbsp", "r2B4"),
     ]),
+    new Round("Quarterfinal B", [
+        new Match("", "&nbsp", "&nbsp", "(3)", "qB1"),
+        new Match("", "&nbsp", "&nbsp", "(4)", "qB2"),
+        new Match("", "&nbsp", "&nbsp", "(1)", "qB3"),
+        new Match("", "&nbsp", "&nbsp", "(2)", "qB4"),
+    ]),
+    new Round("Semifinal C", [
+        new Match("&nbsp", "&nbsp", "(5)", "(6)", "rC1"),
+        new Match("&nbsp", "&nbsp", "(7)", "(8)", "rC2"),
+    ]),
 ]);
 
 const womenSingleDraw = new Tournament("Damen Einzel", [
@@ -38,15 +48,23 @@ const womenSingleDraw = new Tournament("Damen Einzel", [
         new Match("Bye", "", "&nbsp", "&nbsp", "r2B1"),
         new Match("", "", "&nbsp", "&nbsp", "r2B2"),
     ]),
+    new Round("Semifinal B", [
+        new Match("", "&nbsp", "&nbsp", "(2)", "sB1"),
+        new Match("", "&nbsp", "&nbsp", "(1)", "sB2"),
+    ])
 ])
 
 const menDoubleDraw = new Tournament("Herren Doppel", [
     new Round("Round 1", [
         new Match("Michi / Simon", "Herbert / Gerhard", "", "", "r1"),
-        new Match("David P. / Patrick P.", "Peter / Paul", "", "", "r2"),
+        new Match("Daniel / Patrick P.", "Peter / Paul", "", "", "r2"),
         new Match("Patrick Ö. / Mario O.", "Jakob / Mario V.", "", "", "r3"),
-        new Match("Colin / Constantin", "David L. / Thomas", "", "", "r4"),
+        new Match("Colin / Constantin", "David / Thomas", "", "", "r4"),
     ]),
+    new Round("Semifinal B", [
+        new Match("", "&nbsp", "&nbsp", "(2)", "sB1"),
+        new Match("", "&nbsp", "&nbsp", "(1)", "sB2"),
+    ])
 ])
 
 const womenDoubleDraw = new Tournament("Damen Doppel", [
