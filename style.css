@@ -17,7 +17,9 @@ body {
   justify-content: center;
   width: 100%;
 }
-.toggle p {
+.toggle p, .toggle a {
+  color: black;
+  text-decoration: none;
   padding-inline: 2rem;
   padding-block: 0.5rem;
   cursor: pointer;
@@ -26,10 +28,10 @@ body {
   font-weight: 500;
   text-align: center;
 }
-.toggle p:hover {
+.toggle p:hover, .toggle a:hover {
   background-color: hsl(182, 25%, 75%);
 }
-.toggle p.active {
+.toggle p.active, .toggle a.active {
   background-color: hsl(182, 25%, 50%);
 }
 

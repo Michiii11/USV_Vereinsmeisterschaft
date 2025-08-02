@@ -34,6 +34,16 @@ function getDraw(type, elem) {
                 })
             }
             break;
+        case 'menDouble8': draw = menDoubleDraw; printDraw(8);
+            document.querySelector("main").style.width = "max(100%, 1750px)"
+            if(document.querySelector("span")) {
+                document.querySelectorAll("span").forEach(elem => {
+                    elem.style.left = "88%"
+                })
+                document.querySelectorAll("span.right").forEach(elem => {
+                    elem.innerHTML = ""
+                })
+            }break;
         case 'womenSingle': draw = womenSingleDraw; printDraw(8); break;
         case 'womenDouble': printDraw(4); fillRoundRobinMatrix(womenDoubleDraw); return;
     }
@@ -251,14 +261,6 @@ function printDraw(type){
     if (type === 4) {
         const main = document.querySelector("main");
         main.innerHTML = "";
-
-        // Datenstruktur für Spieler und Ergebnisse
-        const roundRobinData = [
-            { name: "Helga / Sabine", spiele: 3, siege: 3, saetze: "6:0", games: "38:17" },
-            { name: "Amelie / Edith", spiele: 3, siege: 2, saetze: "4:2", games: "34:19" },
-            { name: "Marlene / Andrea", spiele: 3, siege: 1, saetze: "2:4", games: "18:33" },
-            { name: "Karin / Rosa", spiele: 3, siege: 0, saetze: "0:6", games: "16:37" }
-        ];
 
         // Erzeuge das Grundgerüst
         const wrapper = document.createElement("div");
