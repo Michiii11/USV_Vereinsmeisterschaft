@@ -57,8 +57,8 @@ const womenSingleDraw = new Tournament("Damen Einzel", [
 const menDoubleDraw = new Tournament("Herren Doppel", [
     new Round("Round 1", [
         new Match("Michi / Simon", "Herbert / Gerhard", "", "", "r1"),
-        new Match("Daniel / Patrick P.", "Peter / Paul", "", "", "r2"),
-        new Match("Patrick Ö. / Mario O.", "Jakob / Mario V.", "", "", "r3"),
+        new Match("Daniel / Philipp", "Peter / Paul", "", "", "r2"),
+        new Match("Patrick / Mario O.", "Jakob / Mario V.", "", "", "r3"),
         new Match("Colin / Constantin", "David / Thomas", "", "", "r4"),
     ]),
     new Round("Semifinal B", [
