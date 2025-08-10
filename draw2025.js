@@ -10,8 +10,8 @@ const menSingleDraw = new Tournament("Herren Einzel", [
         new Match("Bye", "Patrick", "", "", "r8"),
     ]),
     new Round("Quarterfinal A", [
-        new Match("Michi", "", "&nbsp", "", "qA1"),
-        new Match("", "", "", "", "qA2"),
+        new Match("Michi", "&nbsp", "&nbsp", "13.08. 16:00", "qA1"),
+        new Match("Simon", "", "6:3 6:4", "", "qA2"),
         new Match("", "", "", "", "qA3"),
         new Match("", "Patrick", "", "&nbsp", "qA4"),
     ]),
@@ -42,7 +42,7 @@ const womenSingleDraw = new Tournament("Damen Einzel", [
     ]),
     new Round("Semifinal A", [
         new Match("Helga", "", "&nbsp", "", "sA1"),
-        new Match("", "", "", "", "sA2"),
+        new Match("&nbsp", "", "14.08. 9:00", "", "sA2"),
     ]),
     new Round("Round 2 B", [
         new Match("Bye", "", "&nbsp", "&nbsp", "r2B1"),
