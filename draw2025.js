@@ -10,25 +10,29 @@ const menSingleDraw = new Tournament("Herren Einzel", [
         new Match("Bye", "Patrick", "", "", "r8"),
     ]),
     new Round("Quarterfinal A", [
-        new Match("Michi", "&nbsp", "&nbsp", "13.08. 16:00", "qA1"),
+        new Match("Michi", "Peter P.", "&nbsp", "6:0 6:0", "qA1"),
         new Match("Simon", "", "6:3 6:4", "", "qA2"),
-        new Match("", "", "", "", "qA3"),
+        new Match("&nbsp", "", "20.08. 16:00", "", "qA3"),
         new Match("", "Patrick", "", "&nbsp", "qA4"),
     ]),
+    new Round("Semifinal A", [
+        new Match("&nbsp", "&nbsp", "18.08. 16:30", "", "sA1"),
+        new Match("&nbsp", "&nbsp", "", "", "sA2"),
+    ]),
     new Round("Round 2 B", [
-        new Match("Bye", "", "&nbsp", "&nbsp", "r2B1"),
+        new Match("Bye", "Constantin", "&nbsp", "&nbsp", "r2B1"),
         new Match("", "", "&nbsp", "&nbsp", "r2B2"),
         new Match("", "", "&nbsp", "&nbsp", "r2B3"),
         new Match("", "Bye", "&nbsp", "&nbsp", "r2B4"),
     ]),
     new Round("Quarterfinal B", [
-        new Match("", "&nbsp", "&nbsp", "(3)", "qB1"),
+        new Match("Constantin", "&nbsp", "&nbsp", "(3)", "qB1"),
         new Match("", "&nbsp", "&nbsp", "(4)", "qB2"),
         new Match("", "&nbsp", "&nbsp", "(1)", "qB3"),
         new Match("", "&nbsp", "&nbsp", "(2)", "qB4"),
     ]),
     new Round("Semifinal C", [
-        new Match("&nbsp", "&nbsp", "(5)", "(6)", "rC1"),
+        new Match("Bye", "&nbsp", "(5)", "(6)", "rC1"),
         new Match("&nbsp", "&nbsp", "(7)", "(8)", "rC2"),
     ]),
 ]);
@@ -42,11 +46,11 @@ const womenSingleDraw = new Tournament("Damen Einzel", [
     ]),
     new Round("Semifinal A", [
         new Match("Helga", "Andrea", "&nbsp", "2:6 6:1 6:3", "sA1"),
-        new Match("&nbsp", "", "14.08. 9:00", "", "sA2"),
+        new Match("Emma", "&nbsp", "6:3 6:4", "18.08. 18:00", "sA2"),
     ]),
     new Round("Round 2 B", [
         new Match("Bye", "Marlene", "&nbsp", "&nbsp", "r2B1"),
-        new Match("", "", "&nbsp", "&nbsp", "r2B2"),
+        new Match("Erna", "", "&nbsp", "&nbsp", "r2B2"),
     ]),
     new Round("Semifinal B", [
         new Match("", "&nbsp", "&nbsp", "(2)", "sB1"),
@@ -60,6 +64,10 @@ const menDoubleDraw = new Tournament("Herren Doppel", [
         new Match("Daniel / Philipp", "Peter / Paul", "", "", "r2"),
         new Match("Patrick / Mario O.", "Jakob / Mario V.", "", "", "r3"),
         new Match("Colin / Constantin", "David / Thomas", "", "", "r4"),
+    ]),
+    new Round("Semifinal A", [
+        new Match("&nbsp", "&nbsp", "19.08. 18:00", "18.08. 20:00", "sA1"),
+        new Match("", "", "", "", "sA2"),
     ]),
     new Round("Semifinal B", [
         new Match("", "&nbsp", "&nbsp", "(2)", "sB1"),
@@ -81,18 +89,18 @@ const womenDoubleDraw = new Tournament("Damen Doppel", [
     new Round("Round Robin 3", [
         new Match("Karin / Emma", "Helga / Marlene", "", "", "rr1"),
         new Match("Karin / Emma", "Amelie / Edith", "", "", "rr2"),
-        new Match("Karin / Emma", "Andrea / Erna", "", "", "rr3"),
+        new Match("Karin / Emma", "Andrea / Erna", "6:4 6:2", "", "rr3"),
     ]),
     new Round("Round Robin 4", [
         new Match("Andrea / Erna", "Helga / Marlene", "", "", "rr1"),
         new Match("Andrea / Erna", "Amelie / Edith", "", "", "rr2"),
-        new Match("Andrea / Erna", "Karin / Emma", "", "", "rr3"),
+        new Match("Andrea / Erna", "Karin / Emma", "4:6 2:6", "", "rr3"),
     ]),
 ]);
 
 const roundRobinData = [
+    { name: "Karin / Emma", spiele: 1, siege: 1, saetze: "2:0", games: "12:6" },
     { name: "Helga / Marlene", spiele: 0, siege: 0, saetze: "0:0", games: "0:0" },
     { name: "Amelie / Edith", spiele: 0, siege: 0, saetze: "0:0", games: "0:0" },
-    { name: "Karin / Emma", spiele: 0, siege: 0, saetze: "0:0", games: "0:0" },
-    { name: "Andrea / Erna", spiele: 0, siege: 0, saetze: "0:0", games: "0:0" }
+    { name: "Andrea / Erna", spiele: 1, siege: 0, saetze: "0:2", games: "6:12" }
 ];
