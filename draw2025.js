@@ -1,7 +1,7 @@
 const menSingleDraw = new Tournament("Herren Einzel", [
     new Round("1. Runde", [
         new Match("Michi", "Bye", "", "", "r1"),
-        new Match("Constantin", "Peter P.", "", "", "r2"),
+        new Match("Consti", "Peter P.", "", "", "r2"),
         new Match("Colin", "Simon", "", "", "r3"),
         new Match("David", "Thomas", "", "", "r4"),
         new Match("Herbert", "Peter S.", "", "", "r5"),
@@ -20,13 +20,13 @@ const menSingleDraw = new Tournament("Herren Einzel", [
         new Match("&nbsp", "&nbsp", "", "", "sA2"),
     ]),
     new Round("Round 2 B", [
-        new Match("Bye", "Constantin", "&nbsp", "&nbsp", "r2B1"),
+        new Match("Bye", "Consti", "&nbsp", "&nbsp", "r2B1"),
         new Match("", "", "&nbsp", "&nbsp", "r2B2"),
         new Match("", "", "&nbsp", "&nbsp", "r2B3"),
         new Match("", "Bye", "&nbsp", "&nbsp", "r2B4"),
     ]),
     new Round("Quarterfinal B", [
-        new Match("Constantin", "&nbsp", "&nbsp", "(3)", "qB1"),
+        new Match("Consti", "&nbsp", "&nbsp", "(3)", "qB1"),
         new Match("", "&nbsp", "&nbsp", "(4)", "qB2"),
         new Match("", "&nbsp", "&nbsp", "(1)", "qB3"),
         new Match("", "&nbsp", "&nbsp", "(2)", "qB4"),
@@ -48,6 +48,9 @@ const womenSingleDraw = new Tournament("Damen Einzel", [
         new Match("Helga", "Andrea", "&nbsp", "2:6 6:1 6:3", "sA1"),
         new Match("Emma", "&nbsp", "6:3 6:4", "18.08. 18:00", "sA2"),
     ]),
+    new Round("Final A", [
+       new Match("&nbsp", "&nbsp", "17.08. 17:00", "", "fA"),
+    ]),
     new Round("Round 2 B", [
         new Match("Bye", "Marlene", "&nbsp", "&nbsp", "r2B1"),
         new Match("Erna", "", "&nbsp", "&nbsp", "r2B2"),
@@ -63,7 +66,7 @@ const menDoubleDraw = new Tournament("Herren Doppel", [
         new Match("Michi / Simon", "Herbert / Gerhard", "", "", "r1"),
         new Match("Daniel / Philipp", "Peter / Paul", "", "", "r2"),
         new Match("Patrick / Mario O.", "Jakob / Mario V.", "", "", "r3"),
-        new Match("Colin / Constantin", "David / Thomas", "", "", "r4"),
+        new Match("Colin / Consti", "David / Thomas", "", "", "r4"),
     ]),
     new Round("Semifinal A", [
         new Match("&nbsp", "&nbsp", "19.08. 18:00", "18.08. 20:00", "sA1"),
