@@ -16,7 +16,7 @@ const menSingleDraw = new Tournament("Herren Einzel", [
         new Match("", "Patrick", "", "", "qA4"),
     ]),
     new Round("Semifinal A", [
-        new Match("", "", "18.08. 16:30", "", "sA1"),
+        new Match("Michi", "", "6:2 6:0", "", "sA1"),
         new Match("", "", "", "", "sA2"),
     ]),
     new Round("Round 2 B", [
@@ -28,7 +28,7 @@ const menSingleDraw = new Tournament("Herren Einzel", [
     new Round("Quarterfinal B", [
         new Match("Consti", "", "", "(3)", "qB1"),
         new Match("", "", "", "(4)", "qB2"),
-        new Match("", "", "", "(1)", "qB3"),
+        new Match("", "Peter P.", "", "(1)", "qB3"),
         new Match("", "", "", "(2)", "qB4"),
     ]),
     new Round("Semifinal C", [
