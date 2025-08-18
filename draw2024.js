@@ -26,10 +26,10 @@ const menSingleDraw = new Tournament("Herren Einzel", [
         new Match("Michi", "", "6:4 6:2", "", "wA"),
     ]),
     new Round("Round 2 B", [
-        new Match("David L.", "Andi", "&nbsp", "&nbsp", "r2B1"),
-        new Match("David K.", "Lukas L.", "&nbsp", "&nbsp", "r2B2"),
-        new Match("Herbert", "Lukas P.", "&nbsp", "&nbsp", "r2B3"),
-        new Match("Gerhard", "Peter S.", "&nbsp", "&nbsp", "r2B4"),
+        new Match("David L.", "Andi", "", "", "r2B1"),
+        new Match("David K.", "Lukas L.", "", "", "r2B2"),
+        new Match("Herbert", "Lukas P.", "", "", "r2B3"),
+        new Match("Gerhard", "Peter S.", "", "", "r2B4"),
     ]),
     new Round("Quarterfinal B", [
         new Match("Andi", "Julian", "6:1 6:1", "(3)", "qB1"),
@@ -77,8 +77,8 @@ const womenSingleDraw = new Tournament("Damen Einzel", [
         new Match("Lea", "", "6:1 6:2", "", "wA"),
     ]),
     new Round("Round 2 B", [
-        new Match("Andrea", "Edith", "&nbsp", "&nbsp", "r2B1"),
-        new Match("Marlene", "Rosa", "&nbsp", "&nbsp", "r2B2"),
+        new Match("Andrea", "Edith", "", "", "r2B1"),
+        new Match("Marlene", "Rosa", "", "", "r2B2"),
     ]),
     new Round("Semifinal B", [
         new Match("Andrea", "Amelie", "6:2 6:2", "(2)", "sB1"),
@@ -104,10 +104,10 @@ const menDoubleDraw = new Tournament("Herren Doppel", [
         new Match("Bye", "Michi / Lukas L.", "", "", "r8"),
     ]),
     new Round("Quarterfinal A", [
-        new Match("Lea / Elias", "Thomas / David", "&nbsp", "1:6 6:2 6:4", "qA1"),
-        new Match("Patrick Ö. / Mario O.", "Herbert / Gerhard", "6:0 6:1", "&nbsp", "qA2"),
-        new Match("Peter S. / Andi", "Daniel / Philipp", "&nbsp", "&nbsp", "qA3"),
-        new Match("Lukas P. / Jakob", "Michi / Lukas L.", "&nbsp", "&nbsp", "qA4"),
+        new Match("Lea / Elias", "Thomas / David", "", "1:6 6:2 6:4", "qA1"),
+        new Match("Patrick Ö. / Mario O.", "Herbert / Gerhard", "6:0 6:1", "", "qA2"),
+        new Match("Peter S. / Andi", "Daniel / Philipp", "", "", "qA3"),
+        new Match("Lukas P. / Jakob", "Michi / Lukas L.", "", "", "qA4"),
     ]),
     new Round("Semifinal A", [
         new Match("Thomas / David", "Herbert / Gerhard", "3:6 6:4 10:6", "6:4 7:6", "sA1"),
@@ -120,20 +120,20 @@ const menDoubleDraw = new Tournament("Herren Doppel", [
         new Match("Michi / Lukas L.", "", "7:5 6:2", "", "wA"),
     ]),
     new Round("Round 2 B", [
-        new Match("Bye", "Peter P. / Paul", "&nbsp", "&nbsp", "r2B1"),
-        new Match("Patrick P. / Mario V.", "Bye", "&nbsp", "&nbsp", "r2B2"),
-        new Match("Bye", "Bye", "&nbsp", "&nbsp", "r2B3"),
-        new Match("Bye", "Bye", "&nbsp", "&nbsp", "r2B4"),
+        new Match("Bye", "Peter P. / Paul", "", "", "r2B1"),
+        new Match("Patrick P. / Mario V.", "Bye", "", "", "r2B2"),
+        new Match("Bye", "Bye", "", "", "r2B3"),
+        new Match("Bye", "Bye", "", "", "r2B4"),
     ]),
     new Round("Quarterfinal B", [
-        new Match("Peter P. / Paul", "Daniel / Philipp", "&nbsp", "(3)", "qB1"),
-        new Match("Patrick P. / Mario V.", "Lukas P. / Jakob", "&nbsp", "(4)", "qB2"),
-        new Match("Bye", "Lea / Elias", "&nbsp", "(1)", "qB3"),
+        new Match("Peter P. / Paul", "Daniel / Philipp", "", "(3)", "qB1"),
+        new Match("Patrick P. / Mario V.", "Lukas P. / Jakob", "", "(4)", "qB2"),
+        new Match("Bye", "Lea / Elias", "", "(1)", "qB3"),
         new Match("Bye", "Patrick Ö. / Mario O.", "", "(2)", "qB4"),
     ]),
     new Round("Semifinal B", [
         new Match("Peter P. / Paul", "Lukas / Jakob", "6:0 6:0", "6:2 6:3", "sB1"),
-        new Match("Lea / Elias", "Patrick Ö. / Mario O.", "&nbsp", "&nbsp", "sB2"),
+        new Match("Lea / Elias", "Patrick Ö. / Mario O.", "", "", "sB2"),
     ]),
     new Round("Final B", [
         new Match("Peter P. / Paul", "Lea / Elias", "6:0 6:4", "6:3 0:6 7:6", "fB"),

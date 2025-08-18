@@ -48,6 +48,7 @@ function getDraw(type, elem) {
         case 'womenDouble': printDraw(4); fillRoundRobinMatrix(womenDoubleDraw); return;
     }
 
+    let roundCount = 0;
     draw.rounds.forEach(round => {
         round.matches.forEach(match => {
             let bracket = document.querySelector(`.${match.className}`);
@@ -55,14 +56,17 @@ function getDraw(type, elem) {
                 let player1 = bracket.querySelectorAll("div.person")[0].querySelectorAll("p");
                 if(bracket.querySelectorAll("div.person")[1]) {
                     let player2 = bracket.querySelectorAll("div.person")[1].querySelectorAll("p");
-                    player2[0].innerHTML = match.player2
-                    player2[1].innerHTML = match.result2
+
+                    console.log(match.player2)
+                    player2[0].innerHTML = match.player2.trim() !== "" || roundCount === 0 ? match.player2 : "&nbsp";
+                    player2[1].innerHTML = match.result2.trim() !== "" || roundCount === 0 ? match.result2 : "&nbsp";
                 }
 
-                player1[0].innerHTML = match.player1
-                player1[1].innerHTML = match.result1
+                player1[0].innerHTML = match.player1.trim() !== "" || roundCount === 0 ? match.player1 : "&nbsp";
+                player1[1].innerHTML = match.result1.trim() !== "" || roundCount === 0 ? match.result1 : "&nbsp";
             }
         })
+        roundCount++;
     });
 }
 
