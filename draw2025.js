@@ -34,6 +34,10 @@ const menSingleDraw = new Tournament("Herren Einzel", [
         new Match("", "Peter P.", "", "(1)", "qB3"),
         new Match("Mario", "Simon", "", "(2)", "qB4"),
     ]),
+    new Round("Semifinal B", [
+        new Match("", "", "", "", "sB1"),
+        new Match("", "", "", "24.08. 18:00", "sB2"),
+    ]),
     new Round("Semifinal C", [
         new Match("Bye", "", "(5)", "(6)", "rC1"),
         new Match("", "Bye", "(7)", "(8)", "rC2"),
