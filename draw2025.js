@@ -64,7 +64,7 @@ const womenSingleDraw = new Tournament("Damen Einzel", [
     ]),
     new Round("Semifinal B", [
         new Match("Marlene", "", "", "(2)", "sB1"),
-        new Match("", "Andrea", "25.08. 17:30", "(1)", "sB2"),
+        new Match("Karin", "Andrea", "6:1 6:2", "(1)", "sB2"),
     ])
 ])
 
@@ -77,7 +77,7 @@ const menDoubleDraw = new Tournament("Herren Doppel", [
     ]),
     new Round("Semifinal A", [
         new Match("Michi / Simon", "Peter / Paul", "7:5 7:5", "6:0 6:0", "sA1"),
-        new Match("", "", "27.08. 19:00", "", "sA2"),
+        new Match("", "", "27.08. 19:00", "27.08. 18:00", "sA2"),
     ]),
     new Round("Final A", [
         new Match("", "", "25.08. 20:00", "", "fA"),
