@@ -36,7 +36,7 @@ const menSingleDraw = new Tournament("Herren Einzel", [
     ]),
     new Round("Semifinal B", [
         new Match("", "", "", "", "sB1"),
-        new Match("", "", "", "24.08. 18:00", "sB2"),
+        new Match("", "Simon", "", "6:1 6:2", "sB2"),
     ]),
     new Round("Semifinal C", [
         new Match("Bye", "", "(5)", "(6)", "rC1"),
@@ -56,7 +56,7 @@ const womenSingleDraw = new Tournament("Damen Einzel", [
         new Match("Emma", "Amelie", "6:3 6:4", "6:2 6:3", "sA2"),
     ]),
     new Round("Final A", [
-       new Match("Helga", "", "6:0 6:0", "24.08. 17:00", "fA"),
+       new Match("Helga", "", "6:0 6:0", "", "fA"),
     ]),
     new Round("Round 2 B", [
         new Match("Bye", "Marlene", "", "", "r2B1"),
@@ -64,7 +64,7 @@ const womenSingleDraw = new Tournament("Damen Einzel", [
     ]),
     new Round("Semifinal B", [
         new Match("Marlene", "", "", "(2)", "sB1"),
-        new Match("", "Andrea", "26.08. 16:30", "(1)", "sB2"),
+        new Match("", "Andrea", "25.08. 17:30", "(1)", "sB2"),
     ])
 ])
 
@@ -78,6 +78,9 @@ const menDoubleDraw = new Tournament("Herren Doppel", [
     new Round("Semifinal A", [
         new Match("Michi / Simon", "Peter / Paul", "7:5 7:5", "6:0 6:0", "sA1"),
         new Match("", "", "27.08. 19:00", "", "sA2"),
+    ]),
+    new Round("Final A", [
+        new Match("", "", "25.08. 20:00", "", "fA"),
     ]),
     new Round("Round 2 B", [
         new Match("Herbert / Gerhard", "Daniel / Philipp", "", "", "r2B1"),
