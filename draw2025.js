@@ -20,7 +20,7 @@ const menSingleDraw = new Tournament("Herren Einzel", [
         new Match("", "", "", "", "sA2"),
     ]),
     new Round("Final A", [
-        new Match("", "", "26.08. 18:00", "", "fA"),
+        new Match("Michi", "", "6:1 6:1", "", "fA"),
     ]),
     new Round("Round 2 B", [
         new Match("Bye", "Consti", "", "", "r2B1"),
