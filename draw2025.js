@@ -20,7 +20,7 @@ const menSingleDraw = new Tournament("Herren Einzel", [
         new Match("Herbert", "Patrick", "6:2 6:0", "6:1 6:0", "sA2"),
     ]),
     new Round("Final A", [
-        new Match("Michi", "", "6:1 6:1", "", "fA"),
+        new Match("Michi", "Patrick", "6:1 6:1", "6:1 6:3", "fA"),
     ]),
     new Round("Winner A", [
        new Match("", "", "21.09. 12:00", "", "wA")
@@ -40,6 +40,9 @@ const menSingleDraw = new Tournament("Herren Einzel", [
     new Round("Semifinal B", [
         new Match("Jakob", "Andreas", "6:2 6:4", "w. o.", "sB1"),
         new Match("Peter P.", "Simon", "6:0 6:1", "6:1 6:2", "sB2"),
+    ]),
+    new Round("Final B", [
+        new Match("", "Peter P.", "", "6:1 6:2", "fB")
     ]),
     new Round("Semifinal C", [
         new Match("Bye", "Colin", "(5)", "(6)", "rC1"),
@@ -112,7 +115,7 @@ const menDoubleDraw = new Tournament("Herren Doppel", [
         new Match("Jakob / Mario V.", "Peter / Paul", "7:6 0:6 6:4", "(1)", "sB2"),
     ]),
     new Round("Final B", [
-        new Match("Thomas / David", "", "6:3 6:1", "", "fB")
+        new Match("Thomas / David", "Jakob / Mario V.", "6:3 6:1", "w. o.", "fB")
     ])
 ])
 
