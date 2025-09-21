@@ -71,7 +71,7 @@ const womenSingleDraw = new Tournament("Damen Einzel", [
        new Match("Helga", "Amelie", "6:0 6:0", "6:2 6:0", "fA"),
     ]),
     new Round("Winner A", [
-       new Match("", "", "21.09. 14:00", "", "wA")
+       new Match("Amelie", "", "w. o.", "", "wA")
     ]),
     new Round("Round 2 B", [
         new Match("Bye", "Marlene", "", "", "r2B1"),
@@ -104,7 +104,7 @@ const menDoubleDraw = new Tournament("Herren Doppel", [
         new Match("Michi / Simon", "Patrick / Mario O.", "6:4 6:4", "4:6 7:5 7:6", "fA"),
     ]),
     new Round("Winner A", [
-        new Match("", "", "21.09. 10:00", "", "wA")
+        new Match("Michi / Simon", "", "6:4 6:2", "", "wA")
     ]),
     new Round("Round 2 B", [
         new Match("Herbert / Gerhard", "Daniel / Philipp", "", "", "r2B1"),
@@ -145,6 +145,6 @@ const womenDoubleDraw = new Tournament("Damen Doppel", [
 const roundRobinData = [
     { name: "Helga / Marlene", spiele: 3, siege: 3, saetze: "6:0", games: "36:17" },
     { name: "Amelie / Edith", spiele: 3, siege: 2, saetze: "4:2", games: "33:27" },
-    { name: "Karin / Emma", spiele: 3, siege: 1, saetze: "2:2", games: "29:30" },
+    { name: "Karin / Emma", spiele: 3, siege: 1, saetze: "2:4", games: "29:30" },
     { name: "Andrea / Erna", spiele: 3, siege: 0, saetze: "0:6", games: "10:36" }
 ];
