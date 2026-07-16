@@ -6,7 +6,7 @@ const menSingleDraw = new Tournament("Herren Einzel", [
         new Match("Bye", "David L.", "", "", "r4"),
         new Match("Jakob", "Bye", "", "", "r5"),
         new Match("Bye", "Lukas", "", "", "r6"),
-        new Match("Martin", "Simon", "", "", "r7"),
+        new Match("Martin Moser", "Simon", "", "", "r7"),
         new Match("Bye", "Peter", "", "", "r8"),
     ]),
     new Round("Quarterfinal A", [
