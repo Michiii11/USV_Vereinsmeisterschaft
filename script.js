@@ -45,7 +45,12 @@ function getDraw(type, elem) {
                 })
             }break;
         case 'womenSingle': draw = womenSingleDraw; printDraw(8); break;
-        case 'womenDouble': printDraw(4); fillRoundRobinMatrix(womenDoubleDraw); return;
+        case 'womenDouble': {
+            const teams = getRoundRobinTeams(womenDoubleDraw);
+            printDraw(4, teams);
+            fillRoundRobinMatrix(womenDoubleDraw, teams);
+            return;
+        }
     }
 
     let roundCount = 0;
@@ -70,15 +75,44 @@ function getDraw(type, elem) {
     });
 }
 
-function fillRoundRobinMatrix(tournament) {
-    // Teams aus der ersten Runde extrahieren
-    const teams = [
-        tournament.rounds[0].matches[0].player1,
-        tournament.rounds[0].matches[0].player2,
-        tournament.rounds[0].matches[1].player2,
-        tournament.rounds[0].matches[2].player2
-    ];
-    const table = document.querySelector("table:not(.erg)");
+function getRoundRobinTeams(tournament) {
+    const teams = [];
+
+    const addTeam = team => {
+        const name = typeof team === "string" ? team.trim() : "";
+        if (name && name.toLowerCase() !== "bye" && !teams.includes(name)) {
+            teams.push(name);
+        }
+    };
+
+    // Die Reihenfolge aus der Ergebnistabelle bleibt erhalten.
+    if (typeof roundRobinData !== "undefined" && Array.isArray(roundRobinData)) {
+        roundRobinData.forEach(row => addTeam(row.name));
+    }
+
+    // Neue Teams werden auch erkannt, wenn sie nur bei den Matches ergänzt wurden.
+    tournament.rounds.forEach(round => {
+        round.matches.forEach(match => {
+            addTeam(match.player1);
+            addTeam(match.player2);
+        });
+    });
+
+    return teams;
+}
+
+function reverseRoundRobinResult(result) {
+    const value = typeof result === "string" ? result.trim() : "";
+    if (!value) return "";
+
+    return value.split(/\s+/).map(setResult => {
+        const score = setResult.match(/^(\d+):(\d+)(.*)$/);
+        return score ? `${score[2]}:${score[1]}${score[3]}` : setResult;
+    }).join(" ");
+}
+
+function fillRoundRobinMatrix(tournament, teams = getRoundRobinTeams(tournament)) {
+    const table = document.querySelector("table.round-robin-matrix");
     if (!table) return;
 
     // Alle Matches sammeln
@@ -92,28 +126,33 @@ function fillRoundRobinMatrix(tournament) {
             table.rows[i + 1].cells[0].textContent = teams[i];
     }
 
-    // Ergebnisse in beide Richtungen eintragen
+    // Ergebnisse eintragen. Falls nur eine Spielrichtung angelegt wurde,
+    // wird das Ergebnis fuer die Gegenrichtung automatisch umgedreht.
     for (let i = 0; i < teams.length; i++) {
         for (let j = 0; j < teams.length; j++) {
             if (i === j) continue;
-            const match = matches.find(m =>
+
+            const directMatch = matches.find(m =>
                 m.player1 === teams[i] && m.player2 === teams[j]
             );
-            if (match && table.rows[i + 1] && table.rows[i + 1].cells[j + 1]) {
-                table.rows[i + 1].cells[j + 1].textContent = match.result1;
-            }
-            // Rückspiel (aus Sicht von j)
             const reverseMatch = matches.find(m =>
                 m.player1 === teams[j] && m.player2 === teams[i]
             );
-            if (reverseMatch && table.rows[j + 1] && table.rows[j + 1].cells[i + 1]) {
-                table.rows[j + 1].cells[i + 1].textContent = reverseMatch.result1;
+
+            const directResult = directMatch ? directMatch.result1.trim() : "";
+            const reverseResult = reverseMatch
+                ? reverseRoundRobinResult(reverseMatch.result1)
+                : "";
+            const cell = table.rows[i + 1] && table.rows[i + 1].cells[j + 1];
+
+            if (cell) {
+                cell.textContent = directResult || reverseResult;
             }
         }
     }
 }
 
-function printDraw(type){
+function printDraw(type, roundRobinTeams = []){
     if (type === 16) {
         const main = document.querySelector("main");
         main.innerHTML = "";
@@ -265,6 +304,7 @@ function printDraw(type){
     if (type === 4) {
         const main = document.querySelector("main");
         main.innerHTML = "";
+        main.style.width = `max(100%, ${Math.max(1000, 280 + roundRobinTeams.length * 155)}px)`;
 
         // Erzeuge das Grundgerüst
         const wrapper = document.createElement("div");
@@ -272,9 +312,10 @@ function printDraw(type){
 
         // Erste Tabelle (Matrix)
         const table = document.createElement("table");
-        for (let i = 0; i <= roundRobinData.length; i++) {
+        table.className = "round-robin-matrix";
+        for (let i = 0; i <= roundRobinTeams.length; i++) {
             const tr = document.createElement("tr");
-            for (let j = 0; j <= roundRobinData.length; j++) {
+            for (let j = 0; j <= roundRobinTeams.length; j++) {
                 if (i === 0 && j === 0) {
                     const th = document.createElement("th");
                     th.className = "black";
@@ -312,7 +353,14 @@ function printDraw(type){
         });
         ergTable.appendChild(header);
 
-        roundRobinData.forEach(row => {
+        roundRobinTeams.forEach(name => {
+            const row = roundRobinData.find(entry => entry.name === name) || {
+                name,
+                spiele: 0,
+                siege: 0,
+                saetze: "0:0",
+                games: "0:0"
+            };
             const tr = document.createElement("tr");
             [row.name, row.spiele, row.siege, row.saetze, row.games].forEach(val => {
                 const td = document.createElement("td");

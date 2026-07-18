@@ -15,6 +15,10 @@ const menSingleDraw = new Tournament("Herren Einzel", [
         new Match("Jakob", "Lukas", "", "", "qA3"),
         new Match("", "Peter", "", "", "qA4"),
     ]),
+    new Round("Semifinal A", [
+        new Match("Thomas", "", "6:1 6:1", "", "sA1"),
+        new Match("", "", "", "", "sA2"),
+    ]),
     new Round("Round 2 B", [
         new Match("Bye", "Bye", "", "", "r2B1"),
         new Match("", "Bye", "", "", "r2B2"),
@@ -24,12 +28,16 @@ const menSingleDraw = new Tournament("Herren Einzel", [
     new Round("Quarterfinal B", [
         new Match("Bye", "", "", "(3)", "qB1"),
         new Match("", "", "", "(4)", "qB2"),
-        new Match("Bye", "", "", "(1)", "qB3"),
+        new Match("Bye", "Colin", "", "(1)", "qB3"),
         new Match("", "", "", "(2)", "qB4"),
     ]),
+    new Round("Semifinal B", [
+        new Match("", "", "", "", "sB1"),
+        new Match("Colin", "", "", "", "sB2"),
+    ]),
     new Round("Semifinal C", [
-        new Match("", "", "(5)", "(6)", "rC1"),
-        new Match("", "", "(7)", "(8)", "rC2"),
+        new Match("Bye", "", "(5)", "(6)", "rC1"),
+        new Match("Bye", "", "(7)", "(8)", "rC2"),
     ]),
 ]);
 
@@ -76,24 +84,23 @@ const menDoubleDraw = new Tournament("Herren Doppel", [
 ])
 
 const womenDoubleDraw = new Tournament("Damen Doppel", [
-    new Round("Round Robin 1", [
-        new Match("Sophie / Valentina", "Emma / Karin", "", "", "rr2"),
-        new Match("Sophie / Valentina", "Rosa / Marlene", "", "", "rr3"),
-        new Match("", "", "", "", "rr4"),
-    ]),
-    new Round("Round Robin 2", [
-        new Match("Emma / Karin", "Sophie / Valentina", "", "", "rr1"),
-        new Match("Emma / Karin", "Rosa / Marlene", "", "", "rr3"),
-        new Match("", "", "", "", "rr4"),
-    ]),
-    new Round("Round Robin 3", [
-        new Match("Rosa / Marlene", "Sophie / Valentina", "", "", "rr1"),
-        new Match("Rosa / Marlene", "Emma / Karin", "", "", "rr2"),
-        new Match("", "", "", "", "rr3"),
+    new Round("Round Robin", [
+        new Match("Andrea / Helga", "Amelie / Edith", "", "", "rr2"),
+        new Match("Andrea / Helga", "Sophie / Valentina", "", "", "rr3"),
+        new Match("Andrea / Helga", "Emma / Karin", "", "", "rr4"),
+        new Match("Andrea / Helga", "Rosa / Marlene", "", "", "rr5"),
+        new Match("Amelie / Edith", "Sophie / Valentina", "", "", "rr3"),
+        new Match("Amelie / Edith", "Emma / Karin", "", "", "rr4"),
+        new Match("Amelie / Edith", "Rosa / Marlene", "", "", "rr5"),
+        new Match("Sophie / Valentina", "Emma / Karin", "", "", "rr4"),
+        new Match("Sophie / Valentina", "Rosa / Marlene", "", "", "rr5"),
+        new Match("Emma / Karin", "Rosa / Marlene", "", "", "rr5"),
     ])
 ]);
 
 const roundRobinData = [
+    { name: "Andrea / Helga", spiele: 0, siege: 0, saetze: "0:0", games: "0:0" },
+    { name: "Amelie / Edith", spiele: 0, siege: 0, saetze: "0:0", games: "0:0" },
     { name: "Sophie / Valentina", spiele: 0, siege: 0, saetze: "0:0", games: "0:0" },
     { name: "Emma / Karin", spiele: 0, siege: 0, saetze: "0:0", games: "0:0" },
     { name: "Rosa / Marlene", spiele: 0, siege: 0, saetze: "0:0", games: "0:0" },
