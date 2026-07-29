@@ -17,7 +17,7 @@ const menSingleDraw = new Tournament("Herren Einzel", [
     ]),
     new Round("Semifinal A", [
         new Match("Thomas", "", "6:1 6:1", "", "sA1"),
-        new Match("", "", "", "", "sA2"),
+        new Match("Jakob", "", "6:1 6:2", "", "sA2"),
     ]),
     new Round("Round 2 B", [
         new Match("Bye", "Bye", "", "", "r2B1"),
@@ -26,18 +26,18 @@ const menSingleDraw = new Tournament("Herren Einzel", [
         new Match("", "Bye", "", "", "r2B4"),
     ]),
     new Round("Quarterfinal B", [
-        new Match("Bye", "", "", "(3)", "qB1"),
+        new Match("Bye", "Lukas", "", "(3)", "qB1"),
         new Match("", "", "", "(4)", "qB2"),
         new Match("Bye", "Colin", "", "(1)", "qB3"),
         new Match("", "", "", "(2)", "qB4"),
     ]),
     new Round("Semifinal B", [
-        new Match("", "", "", "", "sB1"),
+        new Match("Lukas", "", "", "", "sB1"),
         new Match("Colin", "", "", "", "sB2"),
     ]),
     new Round("Semifinal C", [
-        new Match("Bye", "", "(5)", "(6)", "rC1"),
-        new Match("Bye", "", "(7)", "(8)", "rC2"),
+        new Match("Bye", "Bye", "(5)", "(6)", "rC1"),
+        new Match("Bye", "Bye", "(7)", "(8)", "rC2"),
     ]),
 ]);
 
@@ -49,15 +49,15 @@ const womenSingleDraw = new Tournament("Damen Einzel", [
         new Match("Marlene", "Amelie", "", "", "r4"),
     ]),
     new Round("Semifinal A", [
-        new Match("Helga", "", "", "", "sA1"),
+        new Match("Helga", "Andrea", "", "6:2 7:6", "sA1"),
         new Match("", "Amelie", "", "6:4 6:1", "sA2"),
     ]),
     new Round("Round 2 B", [
-        new Match("Bye", "", "", "", "r2B1"),
+        new Match("Bye", "Rosa", "", "", "r2B1"),
         new Match("", "Marlene", "", "", "r2B2"),
     ]),
     new Round("Semifinal B", [
-        new Match("", "", "", "(2)", "sB1"),
+        new Match("Rosa", "", "", "(2)", "sB1"),
         new Match("", "", "", "(1)", "sB2"),
     ]),
 ])
@@ -70,11 +70,11 @@ const menDoubleDraw = new Tournament("Herren Doppel", [
         new Match("Simon / Peter", "Herbert / Gerhard", "", "", "r4"),
     ]),
     new Round("Semifinal A", [
-        new Match("", "", "", "", "sA1"),
+        new Match("Thomas / David L.", "Mario O. / Patrick Ö.", "6:3 6:3", "6:2 6:1", "sA1"),
         new Match("", "", "", "", "sA2"),
     ]),
     new Round("Round 2 B", [
-        new Match("", "", "", "", "r2B1"),
+        new Match("Harald / Julian", "David K. / Jakob", "", "", "r2B1"),
         new Match("", "", "", "", "r2B2"),
     ]),
     new Round("Semifinal B", [
