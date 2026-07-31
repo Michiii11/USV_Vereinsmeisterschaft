@@ -50,11 +50,11 @@ const womenSingleDraw = new Tournament("Damen Einzel", [
     ]),
     new Round("Semifinal A", [
         new Match("Helga", "Andrea", "", "6:2 7:6", "sA1"),
-        new Match("", "Amelie", "", "6:4 6:1", "sA2"),
+        new Match("Karin", "Amelie", "7:6 6:0", "6:4 6:1", "sA2"),
     ]),
     new Round("Round 2 B", [
         new Match("Bye", "Rosa", "", "", "r2B1"),
-        new Match("", "Marlene", "", "", "r2B2"),
+        new Match("Emma", "Marlene", "", "", "r2B2"),
     ]),
     new Round("Semifinal B", [
         new Match("Rosa", "", "", "(2)", "sB1"),
