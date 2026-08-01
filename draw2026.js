@@ -92,7 +92,7 @@ const womenDoubleDraw = new Tournament("Damen Doppel", [
         new Match("Amelie / Edith", "Sophie / Valentina", "", "", "rr3"),
         new Match("Amelie / Edith", "Emma / Karin", "", "", "rr4"),
         new Match("Amelie / Edith", "Rosa / Marlene", "", "", "rr5"),
-        new Match("Sophie / Valentina", "Emma / Karin", "", "", "rr4"),
+        new Match("Sophie / Valentina", "Emma / Karin", "4:6 3:6", "", "rr4"),
         new Match("Sophie / Valentina", "Rosa / Marlene", "", "", "rr5"),
         new Match("Emma / Karin", "Rosa / Marlene", "", "", "rr5"),
     ])
@@ -100,8 +100,8 @@ const womenDoubleDraw = new Tournament("Damen Doppel", [
 
 const roundRobinData = [
     { name: "Andrea / Helga", spiele: 1, siege: 1, saetze: "2:0", games: "12:5" },
+    { name: "Emma / Karin", spiele: 1, siege: 1, saetze: "2:0", games: "12:7" },
     { name: "Amelie / Edith", spiele: 0, siege: 0, saetze: "0:0", games: "0:0" },
-    { name: "Emma / Karin", spiele: 0, siege: 0, saetze: "0:0", games: "0:0" },
     { name: "Rosa / Marlene", spiele: 0, siege: 0, saetze: "0:0", games: "0:0" },
-    { name: "Sophie / Valentina", spiele: 1, siege: 0, saetze: "0:2", games: "5:12" },
+    { name: "Sophie / Valentina", spiele: 2, siege: 0, saetze: "0:4", games: "12:24" },
 ];
