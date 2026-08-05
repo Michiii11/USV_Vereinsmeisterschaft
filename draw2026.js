@@ -35,6 +35,9 @@ const menSingleDraw = new Tournament("Herren Einzel", [
         new Match("Lukas", "Martin", "", "6:3 6:4", "sB1"),
         new Match("Colin", "", "", "", "sB2"),
     ]),
+    new Round("Final B", [
+        new Match("Lukas", "", "6:2 6:4", "", "fB")
+    ]),
     new Round("Semifinal C", [
         new Match("Bye", "Bye", "(5)", "(6)", "rC1"),
         new Match("Bye", "Bye", "(7)", "(8)", "rC2"),
@@ -52,13 +55,16 @@ const womenSingleDraw = new Tournament("Damen Einzel", [
         new Match("Helga", "Andrea", "", "6:2 7:6", "sA1"),
         new Match("Karin", "Amelie", "7:6 6:0", "6:4 6:1", "sA2"),
     ]),
+    new Round("Final A", [
+       new Match("Helga", "", "6:0 6:1", "", "fA"),
+    ]),
     new Round("Round 2 B", [
         new Match("Bye", "Rosa", "", "", "r2B1"),
         new Match("Emma", "Marlene", "", "", "r2B2"),
     ]),
     new Round("Semifinal B", [
         new Match("Rosa", "", "", "(2)", "sB1"),
-        new Match("", "", "", "(1)", "sB2"),
+        new Match("", "Andrea", "", "(1)", "sB2"),
     ]),
 ])
 
@@ -94,14 +100,14 @@ const womenDoubleDraw = new Tournament("Damen Doppel", [
         new Match("Amelie / Edith", "Rosa / Marlene", "", "", "rr5"),
         new Match("Sophie / Valentina", "Emma / Karin", "4:6 3:6", "", "rr4"),
         new Match("Sophie / Valentina", "Rosa / Marlene", "", "", "rr5"),
-        new Match("Emma / Karin", "Rosa / Marlene", "", "", "rr5"),
+        new Match("Emma / Karin", "Rosa / Marlene", "6:2 6:2", "", "rr5"),
     ])
 ]);
 
 const roundRobinData = [
+    { name: "Emma / Karin", spiele: 2, siege: 2, saetze: "4:0", games: "24:11" },
     { name: "Andrea / Helga", spiele: 1, siege: 1, saetze: "2:0", games: "12:5" },
-    { name: "Emma / Karin", spiele: 1, siege: 1, saetze: "2:0", games: "12:7" },
     { name: "Amelie / Edith", spiele: 0, siege: 0, saetze: "0:0", games: "0:0" },
-    { name: "Rosa / Marlene", spiele: 0, siege: 0, saetze: "0:0", games: "0:0" },
+    { name: "Rosa / Marlene", spiele: 1, siege: 0, saetze: "0:2", games: "4:12" },
     { name: "Sophie / Valentina", spiele: 2, siege: 0, saetze: "0:4", games: "12:24" },
 ];
