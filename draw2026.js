@@ -66,6 +66,9 @@ const womenSingleDraw = new Tournament("Damen Einzel", [
         new Match("Rosa", "Karin", "", "(2)", "sB1"),
         new Match("Emma", "Andrea", "7:5 6:2", "(1)", "sB2"),
     ]),
+    new Round("Final B", [
+        new Match("Karin", "", "6:0 7:5", "", "fB")
+    ])
 ])
 
 const menDoubleDraw = new Tournament("Herren Doppel", [
