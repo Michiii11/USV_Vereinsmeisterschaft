@@ -86,7 +86,7 @@ const menDoubleDraw = new Tournament("Herren Doppel", [
         new Match("Philipp / Colin", "Herbert / Gerhard", "6:0 3:6 10:6", "", "sA2"),
     ]),
     new Round("Final A", [
-        new Match("", "Herbert / Gerhard", "", "6:3 6:0", "fA")
+        new Match("Thomas / David", "Herbert / Gerhard", "2:6 6:0 7:6", "6:3 6:0", "fA")
     ]),
     new Round("Round 2 B", [
         new Match("Harald / Julian", "David K. / Jakob", "", "", "r2B1"),
@@ -94,7 +94,7 @@ const menDoubleDraw = new Tournament("Herren Doppel", [
     ]),
     new Round("Semifinal B", [
         new Match("Harald / Julian", "Philipp / Colin", "6:2 6:1", "(2)", "sB1"),
-        new Match("Mario V. / Patrick P.", "", "", "(1)", "sB2"),
+        new Match("Mario V. / Patrick P.", "Mario O. / Patrick Ö.", "", "(1)", "sB2"),
     ])
 ])
 
