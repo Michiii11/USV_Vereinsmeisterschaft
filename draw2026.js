@@ -135,6 +135,6 @@ const roundRobinData = [
     { name: "Andrea / Helga", spiele: 3, siege: 3, saetze: "6:0", games: "36:11" },
     { name: "Amelie / Edith", spiele: 3, siege: 3, saetze: "6:1", games: "45:30" },
     { name: "Emma / Karin", spiele: 4, siege: 2, saetze: "5:4", games: "46:43" },
-    { name: "Rosa / Marlene", spiele: 4, siege: 1, saetze: "2:7", games: "36:57" }
+    { name: "Rosa / Marlene", spiele: 4, siege: 1, saetze: "2:7", games: "36:57" },
     { name: "Sophie / Valentina", spiele: 4, siege: 0, saetze: "1:8", games: "35:57" },
 ];
