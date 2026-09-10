@@ -68,7 +68,7 @@ const womenSingleDraw = new Tournament("Damen Einzel", [
        new Match("Helga", "Amelie", "6:0 6:1", "1:6 7:6 10:3", "fA"),
     ]),
     new Round("Winner A", [
-        new Match("Helga", "", "w. o.", "", "wA")
+        new Match("", "", "", "", "wA")
     ]),
     new Round("Round 2 B", [
         new Match("Bye", "Rosa", "", "", "r2B1"),
@@ -135,6 +135,6 @@ const roundRobinData = [
     { name: "Andrea / Helga", spiele: 3, siege: 3, saetze: "6:0", games: "36:11" },
     { name: "Amelie / Edith", spiele: 3, siege: 3, saetze: "6:1", games: "45:30" },
     { name: "Emma / Karin", spiele: 4, siege: 2, saetze: "5:4", games: "46:43" },
-    { name: "Rosa / Marlene", spiele: 3, siege: 2, saetze: "2:5", games: "32:45" },
+    { name: "Rosa / Marlene", spiele: 4, siege: 1, saetze: "2:7", games: "36:57" }
     { name: "Sophie / Valentina", spiele: 4, siege: 0, saetze: "1:8", games: "35:57" },
 ];
