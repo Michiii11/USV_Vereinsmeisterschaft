@@ -68,7 +68,7 @@ const womenSingleDraw = new Tournament("Damen Einzel", [
        new Match("Helga", "Amelie", "6:0 6:1", "1:6 7:6 10:3", "fA"),
     ]),
     new Round("Winner A", [
-        new Match("", "", "", "", "wA")
+        new Match("Helga", "", "6:2 6:3", "", "wA")
     ]),
     new Round("Round 2 B", [
         new Match("Bye", "Rosa", "", "", "r2B1"),
